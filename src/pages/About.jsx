@@ -263,21 +263,40 @@ export default function About() {
             <h2 className="section-title">Why <span className="gradient-text">Sparrow Academy</span></h2>
           </div>
 
-          {/* Row 1 — existing 4 cards (with check icon style) */}
-          <div className="about-why-grid" style={{ marginTop: "36px" }}>
-            {siteConfig.whySparrowPoints.map((point) => (
-              <div className="about-why-card" key={point.title}>
-                <div className="about-why-check"><IconCheck /></div>
-                <div>
-                  <h4>{point.title}</h4>
-                  <p>{point.description}</p>
-                </div>
+          {/* Row 1 — 4 feature cards (icon style) */}
+          <div className="about-feature-grid" style={{ marginTop: "36px" }}>
+            {[
+              {
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                title: "Industry-Relevant Skills",
+                desc: "Design, animation and AI workflows that match what studios and agencies need today."
+              },
+              {
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6M7 16h8"/></svg>,
+                title: "Real Project Experience",
+                desc: "Work on live briefs and build a portfolio that proves your ability."
+              },
+              {
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
+                title: "AI-Ready Creatives",
+                desc: "Use AI tools to work faster, explore more ideas and stay ahead, while keeping your own style."
+              },
+              {
+                icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>,
+                title: "Career & Freelance Support",
+                desc: "Guidance on portfolios, pricing, client handling and finding your first opportunities."
+              }
+            ].map((card) => (
+              <div className="about-feature-card" key={card.title}>
+                <div className="about-feature-icon">{card.icon}</div>
+                <h4 className="about-feature-title">{card.title}</h4>
+                <p className="about-feature-desc">{card.desc}</p>
               </div>
             ))}
           </div>
 
-          {/* Row 2 — 4 new feature cards */}
-          <div className="about-feature-grid">
+          {/* Row 2 — 4 feature cards */}
+          <div className="about-feature-grid" style={{ marginTop: "20px" }}>
             {WHY_CARDS_ROW2.map((card) => (
               <div className="about-feature-card" key={card.title}>
                 <div className="about-feature-icon">{card.icon}</div>
