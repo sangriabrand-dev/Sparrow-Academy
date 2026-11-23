@@ -1,0 +1,188 @@
+/* =========================================================
+   SPARROW CREATIVE ACADEMY — INSTRUCTORS PAGE STYLING
+   Indigo · Violet · Electric Blue · Obsidian Navy
+   ========================================================= */
+
+.instructors-wrapper {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.instructors-section {
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.instructors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 28px;
+}
+
+.instructor-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  min-width: 0;
+  max-width: 100%;
+}
+
+.instructor-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.instructor-card-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.instructor-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
+}
+
+.verified-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background: #16a34a;
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--surface);
+}
+
+.instructor-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.instructor-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.instructor-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.instructor-exp {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.instructor-bio {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.instructor-teaching {
+  background: var(--surface-soft);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.instructor-teaching small {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.instructor-teaching strong {
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.instructor-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.specialty-pill {
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--primary);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.instructor-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.mentor-courses-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.mentor-courses-link:hover {
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .instructors-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .instructor-card {
+    padding: 24px 16px;
+  }
+}

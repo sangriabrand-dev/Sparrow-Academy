@@ -1,0 +1,16 @@
+# Protect mailer sidecar files even if the parent .htaccess is skipped
+<FilesMatch "(^config\.php$|^config\.example\.php$|^submissions\.log$|^rate-limit\.json$|^SmtpMailer\.php$)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Deny PHPMailer library browsing
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^lib/ - [F,L]
+</IfModule>

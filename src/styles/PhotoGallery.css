@@ -1,0 +1,152 @@
+/* =========================================================
+   SPARROW CREATIVE ACADEMY — PHOTO GALLERY STYLING
+   ========================================================= */
+
+.gallery-page {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.gallery-toolbar-section {
+  padding: 24px 0 32px;
+  background: var(--bg);
+}
+
+.gallery-grid-section {
+  padding: 0 0 var(--space-16);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card-placeholder {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card-placeholder:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.gallery-frame-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--surface-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-frame-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-frame-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.gallery-card-info {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.gallery-card-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.gallery-card-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.gallery-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- NOTICE BOX --- */
+.gallery-notice-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 48px 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-notice-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.gallery-notice-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.gallery-notice-desc {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .gallery-notice-box {
+    padding: 32px 20px;
+  }
+}

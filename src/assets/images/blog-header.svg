@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="1920" height="800">
+  <defs>
+    <linearGradient id="b-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0e1726"/>
+    </linearGradient>
+    <linearGradient id="b-ribbon1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#8b5cf6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="b-ribbon2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.45"/>
+    </linearGradient>
+    <radialGradient id="b-glow" cx="85%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.42"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Deep Base -->
+  <rect width="1920" height="800" fill="url(#b-bg)"/>
+
+  <!-- Radiant Backlight Glow -->
+  <rect width="1920" height="800" fill="url(#b-glow)"/>
+
+  <!-- Fluid Curving Ribbons on Right -->
+  <path d="M800 680 C1100 520, 1300 700, 1550 480 C1750 300, 1850 180, 1920 100 L1920 320 C1820 420, 1680 560, 1480 640 C1280 720, 1050 780, 800 800 Z" fill="url(#b-ribbon1)"/>
+  <path d="M980 800 C1200 600, 1420 680, 1640 440 C1780 280, 1860 220, 1920 160 L1920 380 C1820 500, 1680 620, 1500 710 C1300 800, 1150 800, 980 800 Z" fill="url(#b-ribbon2)"/>
+
+  <!-- Precise Flow Streamlines -->
+  <path d="M720 740 C1100 560, 1350 640, 1600 420 C1760 280, 1850 200, 1920 140" fill="none" stroke="#a78bfa" stroke-width="2" stroke-opacity="0.45"/>
+  <path d="M850 780 C1180 600, 1420 670, 1680 460 C1800 360, 1870 280, 1920 220" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.35"/>
+  <path d="M1020 800 C1280 650, 1500 700, 1750 500 C1840 420, 1890 360, 1920 300" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Editorial Accent Markers -->
+  <circle cx="1600" cy="420" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="1760" cy="280" r="3.5" fill="#38bdf8" opacity="0.8"/>
+  <circle cx="1450" cy="540" r="4.5" fill="#a78bfa" opacity="0.7"/>
+  <circle cx="1850" cy="200" r="3" fill="#818cf8" opacity="0.9"/>
+
+  <!-- Floating Ambient Particles -->
+  <circle cx="1380" cy="280" r="2.5" fill="#38bdf8" opacity="0.5"/>
+  <circle cx="1520" cy="200" r="2" fill="#ffffff" opacity="0.6"/>
+  <circle cx="1700" cy="140" r="2.5" fill="#818cf8" opacity="0.5"/>
+
+  <!-- Calm Dark Center Shield -->
+  <rect width="1920" height="800" fill="#090d16" opacity="0.22"/>
+</svg>

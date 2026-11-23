@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+config.php
+public/api/config.php
+public/api/submissions.log
+public/api/rate-limit.json
+.DS_Store
+Thumbs.db

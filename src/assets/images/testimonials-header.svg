@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="1920" height="800">
+  <defs>
+    <linearGradient id="t-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911"/>
+      <stop offset="45%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="t-burst" cx="80%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.32"/>
+      <stop offset="25%" stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#4f46e5" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="t-ray" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Base -->
+  <rect width="1920" height="800" fill="url(#t-bg)"/>
+
+  <!-- Radial Burst Aura -->
+  <rect width="1920" height="800" fill="url(#t-burst)"/>
+
+  <!-- Radiant Light Rays Emitted from Focal Area (1550, 280) -->
+  <g stroke="url(#t-ray)" stroke-width="1.5">
+    <line x1="1550" y1="280" x2="1000" y2="700"/>
+    <line x1="1550" y1="280" x2="1150" y2="780"/>
+    <line x1="1550" y1="280" x2="1350" y2="800"/>
+    <line x1="1550" y1="280" x2="1850" y2="750"/>
+    <line x1="1550" y1="280" x2="1920" y2="550"/>
+    <line x1="1550" y1="280" x2="1920" y2="150"/>
+    <line x1="1550" y1="280" x2="1400" y2="0"/>
+  </g>
+
+  <!-- Glowing Curvature Arc -->
+  <path d="M1100 800 C1350 600, 1500 500, 1680 320 C1800 200, 1880 120, 1920 60" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-opacity="0.45"/>
+  <path d="M1250 800 C1450 620, 1600 520, 1750 360 C1840 260, 1900 180, 1920 120" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Starburst Core Glow & Accents -->
+  <circle cx="1550" cy="280" r="100" fill="#7c3aed" opacity="0.25" filter="blur(20px)"/>
+  <circle cx="1550" cy="280" r="30" fill="#f59e0b" opacity="0.2" filter="blur(10px)"/>
+
+  <!-- Star Particle Marks -->
+  <g fill="#f59e0b" opacity="0.85">
+    <polygon points="1550,265 1554,277 1566,280 1554,283 1550,295 1546,283 1534,280 1546,277"/>
+    <polygon points="1720,200 1723,208 1731,210 1723,212 1720,220 1717,212 1709,210 1717,208" opacity="0.75"/>
+    <polygon points="1420,380 1422,386 1428,388 1422,390 1420,396 1418,390 1412,388 1418,386" opacity="0.65"/>
+  </g>
+
+  <!-- Luminous Stellar Points -->
+  <circle cx="1680" cy="320" r="4.5" fill="#ffffff" opacity="0.9"/>
+  <circle cx="1480" cy="210" r="3" fill="#a78bfa" opacity="0.8"/>
+  <circle cx="1780" cy="360" r="3.5" fill="#38bdf8" opacity="0.75"/>
+  <circle cx="1620" cy="450" r="3" fill="#f59e0b" opacity="0.7"/>
+
+  <!-- Calm Dark Center Shield -->
+  <rect width="1920" height="800" fill="#090d16" opacity="0.22"/>
+</svg>

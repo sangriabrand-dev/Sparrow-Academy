@@ -1,0 +1,121 @@
+/* =========================================================
+   SPARROW CREATIVE ACADEMY — 404 NOT FOUND PAGE STYLING
+   ========================================================= */
+
+.notfound-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.notfound-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.notfound-main::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.notfound-content {
+  max-width: 560px;
+  position: relative;
+  z-index: 2;
+}
+
+.notfound-code {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(5rem, 12vw, 8rem);
+  font-weight: 900;
+  line-height: 1;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+  letter-spacing: -0.04em;
+}
+
+.notfound-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.notfound-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.notfound-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.notfound-quick-links {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.notfound-quick-links a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.notfound-quick-links a:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+@media (max-width: 600px) {
+  .notfound-main {
+    padding: 80px 16px 40px;
+  }
+  .notfound-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .notfound-actions .btn-reusable {
+    width: 100%;
+    justify-content: center;
+  }
+  .notfound-quick-links {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="1920" height="800">
+  <defs>
+    <linearGradient id="ct-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060911"/>
+      <stop offset="50%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="ct-glow" cx="80%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.38"/>
+      <stop offset="45%" stop-color="#7c3aed" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ct-link" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Base -->
+  <rect width="1920" height="800" fill="url(#ct-bg)"/>
+
+  <!-- Network Ambience Glow -->
+  <rect width="1920" height="800" fill="url(#ct-glow)"/>
+
+  <!-- Beacon Pulse Waves from Communications Hub (1520, 360) -->
+  <g transform="translate(1520, 360)">
+    <circle r="340" fill="none" stroke="#6366f1" stroke-width="1" stroke-opacity="0.1" stroke-dasharray="8,6"/>
+    <circle r="250" fill="none" stroke="#8b5cf6" stroke-width="1.2" stroke-opacity="0.15"/>
+    <circle r="170" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.25"/>
+    <circle r="90" fill="none" stroke="#818cf8" stroke-width="2" stroke-opacity="0.4"/>
+    <circle r="35" fill="rgba(99, 102, 241, 0.25)" stroke="#a78bfa" stroke-width="2" stroke-opacity="0.8"/>
+    <circle r="10" fill="#ffffff"/>
+  </g>
+
+  <!-- Interconnected Network Nodes & Communication Pathways -->
+  <g stroke="url(#ct-link)" stroke-width="1.5">
+    <line x1="1520" y1="360" x2="1280" y2="240"/>
+    <line x1="1520" y1="360" x2="1350" y2="520"/>
+    <line x1="1520" y1="360" x2="1750" y2="220"/>
+    <line x1="1520" y1="360" x2="1720" y2="540"/>
+    <line x1="1280" y1="240" x2="1140" y2="340"/>
+    <line x1="1350" y1="520" x2="1180" y2="600"/>
+    <line x1="1750" y1="220" x2="1880" y2="320"/>
+    <line x1="1720" y1="540" x2="1850" y2="640"/>
+  </g>
+
+  <!-- Communication Node Dots -->
+  <circle cx="1280" cy="240" r="5" fill="#38bdf8"/>
+  <circle cx="1350" cy="520" r="4.5" fill="#a78bfa"/>
+  <circle cx="1750" cy="220" r="5" fill="#818cf8"/>
+  <circle cx="1720" cy="540" r="4.5" fill="#38bdf8"/>
+  <circle cx="1140" cy="340" r="3.5" fill="#818cf8" opacity="0.7"/>
+  <circle cx="1180" cy="600" r="3.5" fill="#a78bfa" opacity="0.6"/>
+  <circle cx="1880" cy="320" r="4" fill="#ffffff" opacity="0.8"/>
+  <circle cx="1850" cy="640" r="3.5" fill="#818cf8" opacity="0.7"/>
+
+  <!-- Flowing Connection Arch over Base -->
+  <path d="M900 800 C1180 660, 1420 700, 1680 580 C1800 520, 1870 460, 1920 400" fill="none" stroke="#6366f1" stroke-width="1.8" stroke-opacity="0.35"/>
+
+  <!-- Calm Dark Center Shield -->
+  <rect width="1920" height="800" fill="#090d16" opacity="0.2"/>
+</svg>

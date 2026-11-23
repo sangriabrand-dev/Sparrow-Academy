@@ -1,0 +1,222 @@
+/* =========================================================
+   SPARROW CREATIVE ACADEMY — FOOTER STYLING
+   Obsidian Navy · Indigo Highlights · Slate Typography
+   ========================================================= */
+
+.sparrow-footer {
+  background: #2D1B69;
+  color: #E0E7FF;
+  padding-top: 72px;
+  border-top: 1px solid rgba(91, 75, 225, 0.30);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .sparrow-footer {
+  background: #080D1A;
+  color: #CBD5E1;
+  border-top-color: #1E293B;
+}
+
+.sparrow-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 500px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+/* BRAND COLUMN */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer-brand-logo-img {
+  width: 200px;
+  max-width: 100%;
+  max-height: 52px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-mission-text {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  max-width: 380px;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.social-icon-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition);
+}
+
+.social-icon-btn:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+/* LINK COLUMNS */
+.footer-links-col h4, .footer-contact-col h4 {
+  font-family: "Space Grotesk", sans-serif;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.footer-links-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links-col li a {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.footer-links-col li a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+/* CONTACT COLUMN */
+.footer-contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 0.92rem;
+}
+
+.contact-icon {
+  color: var(--primary-light);
+  font-size: 1.1rem;
+}
+
+.contact-item a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.contact-item a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-support-note {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+
+/* BOTTOM BAR */
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-legal-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-legal-links a:hover {
+  color: #ffffff;
+}
+
+.footer-sep {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 40px;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

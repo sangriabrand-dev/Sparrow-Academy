@@ -1,0 +1,109 @@
+/* ═══ ThemeToggle — Modern Indigo & Obsidian Theme Switch ═══ */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 50px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.toggle-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 28px;
+  border-radius: 50px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1.5px solid transparent;
+}
+
+/* ── Light mode track ── */
+.toggle-track.light {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+/* ── Dark mode track ── */
+.toggle-track.dark {
+  background: #1e293b;
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow:
+    0 0 12px rgba(99, 102, 241, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* ── Thumb ── */
+.toggle-thumb {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 2px;
+  z-index: 1;
+}
+
+.toggle-track.light .toggle-thumb {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.16);
+}
+
+.toggle-track.dark .toggle-thumb {
+  transform: translateX(24px);
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(99, 102, 241, 0.45);
+}
+
+/* ── Icon inside thumb ── */
+.toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.35s ease;
+}
+
+.toggle-track.light .toggle-icon {
+  color: #f59e0b; /* Warm amber sun */
+}
+
+.toggle-track.dark .toggle-icon {
+  color: #ffffff; /* Crisp white moon */
+  transform: rotate(-12deg);
+}
+
+.toggle-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ── Hover states ── */
+.theme-toggle:hover .toggle-track.light {
+  border-color: #94a3b8;
+  box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.08), 0 0 10px rgba(99, 102, 241, 0.15);
+}
+
+.theme-toggle:hover .toggle-track.dark {
+  border-color: rgba(99, 102, 241, 0.7);
+  box-shadow:
+    0 0 18px rgba(99, 102, 241, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
