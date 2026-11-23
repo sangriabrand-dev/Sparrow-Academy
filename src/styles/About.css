@@ -93,7 +93,15 @@
   background: var(--bg-secondary);
 }
 
-/* ── STORY ── */
+/* ── SPARROW ACADEMY (renamed story) ── */
+.about-sparrow-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ── STORY (keep for visual card reuse) ── */
 .about-story-grid {
   display: grid;
   grid-template-columns: 1fr 380px;
@@ -228,6 +236,143 @@
   margin-top: 40px;
 }
 
+/* ── FEATURE CARDS ROW 2 ── */
+.about-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.about-feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-align: center;
+}
+
+.about-feature-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.about-feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin: 0 auto 16px;
+}
+
+.about-feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.about-feature-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ── EMPLOYEE CARDS ── */
+.about-employee-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.about-employee-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.about-employee-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.about-emp-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.about-emp-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.about-emp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.about-emp-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.about-emp-role {
+  font-size: 0.88rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.about-emp-exp {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.about-emp-bio {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.about-emp-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-emp-skill-pill {
+  background: var(--gradient-soft);
+  color: var(--primary);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
 .about-why-card {
   display: flex;
   align-items: flex-start;
@@ -317,7 +462,8 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .about-story-grid {
+  .about-story-grid,
+  .about-sparrow-grid {
     grid-template-columns: 1fr;
   }
   .about-story-visual {
@@ -327,6 +473,9 @@
     grid-template-columns: 1fr;
   }
   .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-feature-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -341,9 +490,21 @@
   .about-stats-grid {
     grid-template-columns: 1fr;
   }
+  .about-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-employee-grid {
+    grid-template-columns: 1fr;
+  }
   .about-hero-actions {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-feature-grid {
+    grid-template-columns: 1fr;
   }
 }
 
