@@ -8,6 +8,7 @@ import "../../styles/Navbar.css";
 
 // Search catalog featuring all 9 approved courses and academy sections
 const SEARCH_DATABASE = [
+  { title: "About Us", category: "Academy", path: "/about", desc: "Who we are, our mission, vision, and why Sparrow Creative Academy." },
   { title: "AI-Powered Graphic Design & Creative Design", category: "Course", path: "/courses/ai-powered-graphic-design-and-creative-design", desc: "Generative brand systems, Midjourney, vector graphics & typography." },
   { title: "Video Editing & AI-Powered Post-Production", category: "Course", path: "/courses/video-editing-and-ai-powered-post-production", desc: "AI timeline cutting, audio mastering & DaVinci Resolve color grading." },
   { title: "AI Motion Graphics & Animation", category: "Course", path: "/courses/ai-motion-graphics-and-animation", desc: "After Effects animation pipelines, kinetic typography & dynamic VFX." },
@@ -51,6 +52,7 @@ export default function Navbar() {
   // Primary navigation order per client instructions
   const navItems = [
     { label: "Home", to: "/" },
+    { label: "About Us", to: "/about" },
     { label: "Courses", to: "/courses" },
     { label: "Placements", to: "/placements" },
     { label: "Learning", to: "/learning-methodology" },

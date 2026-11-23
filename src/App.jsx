@@ -7,6 +7,7 @@ import WhatsAppButton from "./components/layout/WhatsAppButton.jsx";
 import MobileActionBar from "./components/layout/MobileActionBar.jsx";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
 const Courses = lazy(() => import("./pages/Courses.jsx"));
 const CourseDetail = lazy(() => import("./pages/CourseDetail.jsx"));
 const Instructors = lazy(() => import("./pages/Instructors.jsx"));
@@ -43,6 +44,7 @@ export default function App() {
         <Suspense fallback={<RouteFallback />}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
             <Route path="/instructors" element={<Instructors />} />
