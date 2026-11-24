@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../components/layout/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
 import PageHeader from "../components/common/PageHeader.jsx";
@@ -16,24 +16,38 @@ const IconArrow = () => (
   </svg>
 );
 
+const IconStar = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+);
+
 export default function Courses() {
+  const [searchFilter, setSearchFilter] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setPageSeo({
+        setPageSeo({
       title: "AI Design & Video Creation Courses in Bengaluru | Sparrow Creative Academy",
       description: "Explore AI design, AI video creation, VFX, motion graphics, 3D animation and UI/UX courses at Sparrow Creative Academy, Bengaluru. Hands-on, project-based training."
     });
   }, []);
 
-  const handleEnquireClick = (courseTitle) => {
+  const filteredCourses = COURSES_DATA.filter((course) => {
+    const matchesSearch =
+      course.title.toLowerCase().includes(searchFilter.toLowerCase()) ||
+      course.desc.toLowerCase().includes(searchFilter.toLowerCase());
+    return matchesSearch;
+  });
+
+  const handleEnrollClick = (courseTitle) => {
     navigate(`/contact?course=${encodeURIComponent(courseTitle)}`);
   };
 
   const renderCourseCard = (c) => (
-    <article className="course-card course-card-detailed" key={c.id}>
-      {/* Course Thumbnail */}
+    <article className="course-card" key={c.id}>
+      {/* Clean Complete 16:9 Thumbnail Header */}
       <div className="course-card-thumb-wrapper">
         {c.image ? (
           <img
@@ -52,35 +66,60 @@ export default function Courses() {
       </div>
 
       <div className="course-body">
+        <div className="course-badges-row">
+          <span className="course-badge">{c.badge}</span>
+          <span className="course-category-tag">{c.category}</span>
+        </div>
+
         <h3 className="course-title">{c.title}</h3>
+        <p className="course-desc">{c.desc}</p>
 
-        {/* Short course overview */}
-        {c.overview && (
-          <p className="course-overview-text">{c.overview}</p>
-        )}
-
-        {/* Key learning areas */}
-        {c.whatYouLearn && c.whatYouLearn.length > 0 && (
-          <div className="course-learning-areas">
-            <p className="course-learning-label">Key Learning Areas</p>
-            <ul className="course-learning-list">
-              {c.whatYouLearn.slice(0, 4).map((item, i) => (
-                <li key={i} className="course-learning-item">
-                  <span className="course-learning-dot" aria-hidden="true" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+        {/* Up to 3 Key Tool Badges */}
+        {c.tools && c.tools.length > 0 && (
+          <div className="course-tools-list" aria-label="Tools covered">
+            {c.tools.slice(0, 3).map((tool) => (
+              <span key={tool} className="course-tool-pill">{tool}</span>
+            ))}
           </div>
         )}
 
+        <div className="course-meta">
+          <span title="Skill Level">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path d="M12 20v-6M6 20v-3M18 20v-9" strokeLinecap="round" />
+            </svg>
+            {c.level}
+          </span>
+          <span title="Total Duration">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" strokeLinecap="round" />
+            </svg>
+            {c.duration}
+          </span>
+          <span title="Career Support" className="placement-meta-item">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            100% Placement Support
+          </span>
+        </div>
+
         <div className="course-card-actions">
+          <Link
+            to={`/courses/${c.slug}`}
+            className="btn-reusable btn-secondary btn-md"
+            style={{ flex: 1, textDecoration: "none" }}
+          >
+            Curriculum
+          </Link>
           <button
             type="button"
-            className="btn-reusable btn-primary btn-md enquire-button"
-            onClick={() => handleEnquireClick(c.title)}
+            className="btn-reusable btn-primary btn-md enroll-button"
+            style={{ flex: 1.2 }}
+            onClick={() => handleEnrollClick(c.title)}
           >
-            Enquire Now <IconArrow />
+            Enroll <IconArrow />
           </button>
         </div>
       </div>
@@ -101,16 +140,61 @@ export default function Courses() {
         imageAlt="Abstract digital wave patterns and creative tech visualization"
       />
 
+      {/* ── FILTER & SEARCH TOOLBAR ── */}
+      <section className="courses-toolbar-section">
+        <div className="container">
+          <div className="courses-placement-callout">
+            <span className="placement-callout-badge">Career Track</span>
+            <span>All diploma &amp; studio programs include <strong>100% Placement Support</strong>, portfolio reviews &amp; 1-on-1 mentor guidance.</span>
+          </div>
+        </div>
+
+        <div className="container toolbar-inner">
+          <div className="courses-search-bar">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-4-4" strokeLinecap="round" />
+            </svg>
+            <input
+              type="text"
+              placeholder="Filter courses..."
+              value={searchFilter}
+              onChange={(e) => setSearchFilter(e.target.value)}
+              aria-label="Filter courses"
+            />
+            {searchFilter && (
+              <button
+                type="button"
+                className="clear-filter-btn"
+                onClick={() => setSearchFilter("")}
+                aria-label="Clear filter"
+              >
+                ✕
+              </button>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* ── COURSES GRID ── */}
       <section className="courses-section">
         <div className="container">
-          {COURSES_DATA.length === 0 ? (
+          {filteredCourses.length === 0 ? (
             <div className="courses-empty">
-              <p>No courses available at the moment.</p>
+              <p>No results found matching your search.</p>
+              <button
+                type="button"
+                className="btn-reusable btn-secondary btn-md"
+                onClick={() => {
+                  setSearchFilter("");
+                }}
+              >
+                Clear filters
+              </button>
             </div>
           ) : (
             <div className="courses-grid">
-              {COURSES_DATA.map((c) => renderCourseCard(c))}
+              {filteredCourses.map((c) => renderCourseCard(c))}
             </div>
           )}
         </div>
