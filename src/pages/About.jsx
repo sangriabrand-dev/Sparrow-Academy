@@ -308,41 +308,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 5. QUICK STATS ── */}
-      <section className="about-section">
-        <div className="container">
-          <div className="about-stats-grid">
-            <div className="about-stat-card">
-              <div className="about-stat-icon"><IconUsers /></div>
-              <div className="about-stat-text">
-                <strong>Hands-On Learning</strong>
-                <span>Studio-first approach on every program</span>
-              </div>
-            </div>
-            <div className="about-stat-card">
-              <div className="about-stat-icon"><IconAward /></div>
-              <div className="about-stat-text">
-                <strong>Verified Certifications</strong>
-                <span>Portfolio-backed credentials for every graduate</span>
-              </div>
-            </div>
-            <div className="about-stat-card">
-              <div className="about-stat-icon"><IconTarget /></div>
-              <div className="about-stat-text">
-                <strong>100% Placement Support</strong>
-                <span>Resume, portfolio, and referral assistance</span>
-              </div>
-            </div>
-            <div className="about-stat-card">
-              <div className="about-stat-icon"><IconMapPin /></div>
-              <div className="about-stat-text">
-                <strong>Bengaluru Campus</strong>
-                <span>Kodigehalli, Sahakar Nagar</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── CTA ── */}
       <CTASection

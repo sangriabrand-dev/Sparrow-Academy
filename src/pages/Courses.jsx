@@ -4,7 +4,7 @@ import Navbar from "../components/layout/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
 import PageHeader from "../components/common/PageHeader.jsx";
 import CTASection from "../components/common/CTASection.jsx";
-import { COURSES_DATA, COURSE_CATEGORIES } from "../data/courses.js";
+import { COURSES_DATA } from "../data/courses.js";
 import { setPageSeo } from "../utils/seo.js";
 import coursesHeader from "../assets/images/courses-header.svg";
 import "../styles/Courses.css";
@@ -23,7 +23,6 @@ const IconStar = () => (
 );
 
 export default function Courses() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchFilter, setSearchFilter] = useState("");
   const navigate = useNavigate();
 
@@ -36,11 +35,10 @@ export default function Courses() {
   }, []);
 
   const filteredCourses = COURSES_DATA.filter((course) => {
-    const matchesCategory = selectedCategory === "All" || course.category === selectedCategory;
     const matchesSearch =
       course.title.toLowerCase().includes(searchFilter.toLowerCase()) ||
       course.desc.toLowerCase().includes(searchFilter.toLowerCase());
-    return matchesCategory && matchesSearch;
+    return matchesSearch;
   });
 
   const handleEnrollClick = (courseTitle) => {
@@ -152,21 +150,6 @@ export default function Courses() {
         </div>
 
         <div className="container toolbar-inner">
-          <div className="category-pills" role="tablist">
-            {COURSE_CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                className={`filter-pill ${selectedCategory === cat ? "active" : ""}`}
-                onClick={() => setSelectedCategory(cat)}
-                role="tab"
-                aria-selected={selectedCategory === cat}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
           <div className="courses-search-bar">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <circle cx="11" cy="11" r="7" />
@@ -203,7 +186,6 @@ export default function Courses() {
                 type="button"
                 className="btn-reusable btn-secondary btn-md"
                 onClick={() => {
-                  setSelectedCategory("All");
                   setSearchFilter("");
                 }}
               >

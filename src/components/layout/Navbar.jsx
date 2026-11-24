@@ -55,7 +55,6 @@ export default function Navbar() {
     { label: "About Us", to: "/about" },
     { label: "Courses", to: "/courses" },
     { label: "Placements", to: "/placements" },
-    { label: "Learning", to: "/learning-methodology" },
     { label: "Certifications", to: "/certifications" },
     { label: "Photo Gallery", to: "/gallery" },
     { label: "Projects", to: "/projects" },
