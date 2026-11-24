@@ -36,7 +36,7 @@ export default function NotFound() {
 
           <nav className="notfound-quick-links" aria-label="Quick links">
             <span>Popular destinations:</span>
-            <Link to="/learning-methodology">Methodology</Link>
+            <Link to="/courses">Courses</Link>
             <Link to="/testimonials">Student Stories</Link>
             <Link to="/blog">Academy Articles</Link>
             <Link to="/contact">Get in Touch</Link>

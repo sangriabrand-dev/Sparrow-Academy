@@ -19,7 +19,6 @@ const SEARCH_DATABASE = [
   { title: "Data Analytics", category: "Course", path: "/courses/data-analytics", desc: "SQL queries, Python analysis, Power BI & Tableau dashboards." },
   { title: "Quality Control Engineering", category: "Course", path: "/courses/quality-control-engineering", desc: "Quality assurance, Six Sigma, ISO compliance & inspection protocols." },
   { title: "Student Placements", category: "Placements", path: "/placements", desc: "Placement support, portfolio reviews & studio referrals." },
-  { title: "Learning Methodology", category: "Methodology", path: "/learning-methodology", desc: "Studio-first pedagogy, mentorship & applied milestone framework." },
   { title: "Certifications & Achievements", category: "Certifications", path: "/certifications", desc: "Recognitions, registrations, Sangria Edutainment Private Limited, and quality achievements." },
   { title: "Photo Gallery", category: "Gallery", path: "/gallery", desc: "Campus facilities, creative studios, and student activities." },
   { title: "Capstone Projects", category: "Project", path: "/projects", desc: "Practical hands-on industry project deliverables." }
@@ -159,15 +158,11 @@ export default function Navbar() {
               src={logoLight}
               alt="Sparrow Creative Academy"
               className="sparrow-navbar-logo sparrow-logo-light"
-              width="160"
-              height="49"
             />
             <img
               src={logoDark}
               alt="Sparrow Creative Academy"
               className="sparrow-navbar-logo sparrow-logo-dark"
-              width="160"
-              height="49"
             />
           </Link>
 

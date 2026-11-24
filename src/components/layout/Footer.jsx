@@ -111,7 +111,6 @@ export default function Footer() {
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/courses">Courses</Link></li>
             <li><Link to="/placements">Placements</Link></li>
-            <li><Link to="/learning-methodology">Learning Methodology</Link></li>
             <li><Link to="/certifications">Certifications</Link></li>
             <li><Link to="/gallery">Photo Gallery</Link></li>
             <li><Link to="/projects">Projects</Link></li>

@@ -1,0 +1,883 @@
+/* =========================================================
+   SPARROW CREATIVE ACADEMY — COMPREHENSIVE DARK MODE OVERRIDES
+   Theme: Midnight Navy + Electric Blue + Royal Violet + Cyan
+   Applied after all page-specific stylesheets.
+   Uses [data-theme="dark"] selectors — does NOT affect light mode.
+   ========================================================= */
+
+/* =========================================================
+   1. GLOBAL PAGE BACKGROUNDS & BODY
+   ========================================================= */
+[data-theme="dark"] body {
+  background-color: #050C1A;
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .home-wrapper,
+[data-theme="dark"] .about-wrapper,
+[data-theme="dark"] .courses-wrapper,
+[data-theme="dark"] .course-detail-page,
+[data-theme="dark"] .placements-page,
+[data-theme="dark"] .methodology-page,
+[data-theme="dark"] .certifications-page,
+[data-theme="dark"] .gallery-page,
+[data-theme="dark"] .projects-page,
+[data-theme="dark"] .contact-page,
+[data-theme="dark"] .auth-page-wrapper {
+  background: #050C1A;
+  color: #EEF4FF;
+}
+
+/* =========================================================
+   2. NAVBAR — LOGO & DARK BACKGROUND
+   ========================================================= */
+[data-theme="dark"] .sparrow-navbar {
+  background: rgba(5, 12, 26, 0.97) !important;
+  border-bottom-color: #152A4E;
+}
+
+[data-theme="dark"] .sparrow-navbar.scrolled {
+  background: #050C1A !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+  border-bottom-color: #152A4E;
+}
+
+/* Logo — dark mode: amplify the thin white outline so the black wordmark
+   becomes legible against the dark navy navbar. */
+[data-theme="dark"] .sparrow-navbar-logo {
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .sparrow-logo-dark {
+  filter:
+    drop-shadow(0  1px 0 rgba(255, 255, 255, 0.98))
+    drop-shadow(0 -1px 0 rgba(255, 255, 255, 0.98))
+    drop-shadow( 1px 0 0 rgba(255, 255, 255, 0.98))
+    drop-shadow(-1px 0 0 rgba(255, 255, 255, 0.98))
+    drop-shadow(0  2px 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(0 -2px 0 rgba(255, 255, 255, 0.5))
+    drop-shadow( 2px 0 0 rgba(255, 255, 255, 0.5))
+    drop-shadow(-2px 0 0 rgba(255, 255, 255, 0.5)) !important;
+}
+
+/* Mobile nav background — force dark */
+@media (max-width: 900px) {
+  [data-theme="dark"] .sparrow-navbar,
+  [data-theme="dark"] .sparrow-navbar.scrolled {
+    background: #050C1A !important;
+  }
+  [data-theme="dark"] .sparrow-nav-links {
+    background: #07101F !important;
+  }
+}
+
+[data-theme="dark"] .sparrow-nav-link {
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .sparrow-nav-link:hover {
+  color: #60A5FA;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="dark"] .sparrow-nav-link.active {
+  color: #60A5FA;
+  background: rgba(59, 130, 246, 0.14);
+}
+
+[data-theme="dark"] .sparrow-search-bar-inline {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .sparrow-search-bar-inline:hover {
+  border-color: #3B82F6;
+}
+
+[data-theme="dark"] .inline-search-input {
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .sparrow-menu-button {
+  color: #EEF4FF;
+}
+
+/* =========================================================
+   3. HERO SECTION — SOLID DARK BACKGROUNDS FOR PAGE HEADERS
+   ========================================================= */
+
+/* Home hero */
+[data-theme="dark"] .hero {
+  background: linear-gradient(160deg, #050C1A 0%, #07101F 50%, #060E1C 100%);
+  border-bottom-color: #152A4E;
+}
+
+/* About hero */
+[data-theme="dark"] .about-hero {
+  background: #07101F;
+}
+
+[data-theme="dark"] .about-hero-grid {
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+}
+
+[data-theme="dark"] .about-hero-title {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .about-hero-desc {
+  color: #A8C2E8;
+}
+
+/* Placements / Career hero — override the light gradient with solid dark */
+[data-theme="dark"] .career-hero-section {
+  background-color: #050C1A;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 12, 26, 0.96) 0%,
+      rgba(5, 12, 26, 0.90) 40%,
+      rgba(5, 12, 26, 0.50) 65%,
+      rgba(5, 12, 26, 0.15) 85%
+    ),
+    url('/career-success-banner.png');
+  border-bottom-color: #152A4E;
+}
+
+/* PageHeader unified component — replace image hero background in dark */
+[data-theme="dark"] .page-header-unified {
+  background: linear-gradient(160deg, #050C1A 0%, #07101F 100%);
+  border-bottom-color: #152A4E;
+}
+
+[data-theme="dark"] .page-header-unified.has-photo {
+  background: #050C1A;
+  border-bottom-color: #152A4E;
+}
+
+[data-theme="dark"] .page-header-title {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .page-header-desc {
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .page-header-unified::before {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.08) 1.5px, transparent 1.5px);
+}
+
+/* Course detail hero */
+[data-theme="dark"] .course-detail-hero {
+  background: linear-gradient(160deg, #050C1A 0%, #07101F 100%);
+  border-bottom-color: #152A4E;
+}
+
+/* =========================================================
+   4. SECTION BACKGROUNDS
+   ========================================================= */
+[data-theme="dark"] .stats-section,
+[data-theme="dark"] .projects-stats-bar {
+  background: #07101F;
+  border-bottom-color: #152A4E;
+  border-top-color: #152A4E;
+}
+
+[data-theme="dark"] .placement-section,
+[data-theme="dark"] .training-features-section,
+[data-theme="dark"] .learning-paths-section,
+[data-theme="dark"] .live-projects-section,
+[data-theme="dark"] .awards-section,
+[data-theme="dark"] .gallery-section,
+[data-theme="dark"] .about-section.alt-bg,
+[data-theme="dark"] .methodology-pillars-section,
+[data-theme="dark"] .testimonial-preview-section,
+[data-theme="dark"] .home-courses-section,
+[data-theme="dark"] .home-preview-section.alt-bg {
+  background: #07101F;
+  border-top-color: #152A4E;
+  border-bottom-color: #152A4E;
+}
+
+[data-theme="dark"] .courses-preview-section,
+[data-theme="dark"] .about-section,
+[data-theme="dark"] .clients-section,
+[data-theme="dark"] .completed-projects-section,
+[data-theme="dark"] .registrations-section,
+[data-theme="dark"] .quality-section,
+[data-theme="dark"] .faq-section,
+[data-theme="dark"] .facilities-section,
+[data-theme="dark"] .home-preview-section {
+  background: #050C1A;
+  border-color: #152A4E;
+}
+
+/* =========================================================
+   5. CARDS & CONTAINERS
+   ========================================================= */
+[data-theme="dark"] .sparrow-card,
+[data-theme="dark"] .training-feature-card,
+[data-theme="dark"] .placement-card,
+[data-theme="dark"] .learning-path-card,
+[data-theme="dark"] .client-card,
+[data-theme="dark"] .about-mvv-card,
+[data-theme="dark"] .about-why-card,
+[data-theme="dark"] .about-feature-card,
+[data-theme="dark"] .about-employee-card,
+[data-theme="dark"] .about-visual-card,
+[data-theme="dark"] .about-stat-card,
+[data-theme="dark"] .methodology-pillar-card,
+[data-theme="dark"] .gallery-card-placeholder,
+[data-theme="dark"] .contact-info-card,
+[data-theme="dark"] .consultation-form-card,
+[data-theme="dark"] .facility-card,
+[data-theme="dark"] .home-preview-card,
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .testimonial-preview {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .training-feature-card:hover,
+[data-theme="dark"] .placement-card:hover,
+[data-theme="dark"] .learning-path-card:hover,
+[data-theme="dark"] .client-card:hover,
+[data-theme="dark"] .about-mvv-card:hover,
+[data-theme="dark"] .about-why-card:hover,
+[data-theme="dark"] .about-feature-card:hover,
+[data-theme="dark"] .about-employee-card:hover,
+[data-theme="dark"] .methodology-pillar-card:hover,
+[data-theme="dark"] .gallery-card-placeholder:hover,
+[data-theme="dark"] .facility-card:hover,
+[data-theme="dark"] .home-preview-card:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 24px rgba(59, 130, 246, 0.14);
+}
+
+[data-theme="dark"] .faq-item.open {
+  border-color: #3B82F6;
+}
+
+/* Course preview cards on Home */
+[data-theme="dark"] .course-preview-card {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .course-preview-card:hover {
+  border-color: #3B82F6;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+
+/* Stat cards */
+[data-theme="dark"] .stat-card {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+/* =========================================================
+   6. TYPOGRAPHY & HEADINGS
+   ========================================================= */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] li {
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .career-hero-title,
+[data-theme="dark"] .course-hero-title,
+[data-theme="dark"] .training-feature-card h3,
+[data-theme="dark"] .placement-card-title,
+[data-theme="dark"] .learning-path-card h3,
+[data-theme="dark"] .client-content h3,
+[data-theme="dark"] .about-mvv-card h3,
+[data-theme="dark"] .about-why-card h4,
+[data-theme="dark"] .about-feature-title,
+[data-theme="dark"] .about-emp-name,
+[data-theme="dark"] .methodology-pillar-title,
+[data-theme="dark"] .gallery-card-title,
+[data-theme="dark"] .contact-info-title,
+[data-theme="dark"] .consultation-form-title,
+[data-theme="dark"] .facility-title,
+[data-theme="dark"] .home-preview-card-title,
+[data-theme="dark"] .faq-question-btn {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .section-sub,
+[data-theme="dark"] .hero-subtitle,
+[data-theme="dark"] .career-hero-subtitle,
+[data-theme="dark"] .training-feature-card p,
+[data-theme="dark"] .placement-card-desc,
+[data-theme="dark"] .learning-path-card p,
+[data-theme="dark"] .client-content p,
+[data-theme="dark"] .about-mvv-card p,
+[data-theme="dark"] .about-why-card p,
+[data-theme="dark"] .about-feature-desc,
+[data-theme="dark"] .about-emp-bio,
+[data-theme="dark"] .methodology-pillar-desc,
+[data-theme="dark"] .gallery-card-desc,
+[data-theme="dark"] .contact-info-subtitle,
+[data-theme="dark"] .consultation-form-desc,
+[data-theme="dark"] .about-story-text,
+[data-theme="dark"] .about-story-point,
+[data-theme="dark"] .facility-desc,
+[data-theme="dark"] .home-preview-card-desc,
+[data-theme="dark"] .faq-answer,
+[data-theme="dark"] .testimonial-preview blockquote {
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .section-eyebrow,
+[data-theme="dark"] .hero-tag {
+  color: #60A5FA;
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.28);
+}
+
+/* =========================================================
+   7. HERO HIGHLIGHTS & FLOATING CARDS
+   ========================================================= */
+[data-theme="dark"] .hero-highlight {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .hero-highlight-featured {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.35);
+  color: #60A5FA;
+}
+
+/* =========================================================
+   8. FORMS & INPUTS
+   ========================================================= */
+[data-theme="dark"] .form-field-control,
+[data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]),
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .form-field-control::placeholder,
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #4A6485;
+}
+
+[data-theme="dark"] .form-field-control:focus,
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.22);
+  background: #112040;
+}
+
+[data-theme="dark"] .form-field-label,
+[data-theme="dark"] .form-group label,
+[data-theme="dark"] label {
+  color: #A8C2E8;
+}
+
+/* Contact/Enquiry form */
+[data-theme="dark"] .direct-contact-row {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .direct-contact-row:hover {
+  background: #112040;
+  border-color: #3B82F6;
+}
+
+[data-theme="dark"] .contact-detail-label {
+  color: #4A6485;
+}
+
+[data-theme="dark"] .contact-detail-val {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .copy-action-btn {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #607FA8;
+}
+
+[data-theme="dark"] .copy-action-btn:hover {
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+/* Auth inputs */
+[data-theme="dark"] .input-with-icon input {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .input-with-icon input::placeholder {
+  color: #4A6485;
+}
+
+[data-theme="dark"] .auth-card {
+  background: #07101F;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .auth-tabs {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .auth-tab-btn {
+  color: #607FA8;
+}
+
+[data-theme="dark"] .auth-tab-btn.active {
+  background: #112040;
+  color: #60A5FA;
+}
+
+[data-theme="dark"] .auth-header h1 {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .auth-header p {
+  color: #607FA8;
+}
+
+[data-theme="dark"] .auth-form-panel {
+  background: #050C1A;
+}
+
+/* =========================================================
+   9. SEARCH MODAL (DARK MODE)
+   ========================================================= */
+[data-theme="dark"] .sparrow-search-dialog {
+  background: #07101F;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .sparrow-search-header {
+  border-bottom-color: #152A4E;
+}
+
+[data-theme="dark"] .sparrow-search-header input {
+  color: #EEF4FF;
+  background: transparent;
+}
+
+[data-theme="dark"] .sparrow-search-header input::placeholder {
+  color: #4A6485;
+}
+
+[data-theme="dark"] .clear-query-btn,
+[data-theme="dark"] .close-dialog-btn {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #607FA8;
+}
+
+[data-theme="dark"] .search-tag-chip {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .search-tag-chip:hover {
+  background: #2563EB;
+  color: #fff;
+  border-color: #2563EB;
+}
+
+[data-theme="dark"] .search-result-item {
+  background: #0D1B35;
+}
+
+[data-theme="dark"] .search-result-item:hover {
+  background: rgba(59, 130, 246, 0.14);
+  border-color: #3B82F6;
+}
+
+[data-theme="dark"] .result-info strong {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .result-info p {
+  color: #607FA8;
+}
+
+[data-theme="dark"] .sparrow-search-footer {
+  background: #060E1C;
+  border-top-color: #152A4E;
+}
+
+[data-theme="dark"] .sparrow-search-footer kbd {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+/* =========================================================
+   10. MOBILE BOTTOM ACTION BAR
+   ========================================================= */
+[data-theme="dark"] .mobile-bottom-action-bar {
+  background: #07101F;
+  border-top-color: #152A4E;
+}
+
+[data-theme="dark"] .mobile-bar-btn.call {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #EEF4FF;
+}
+
+/* =========================================================
+   11. BACK-TO-TOP BUTTON
+   ========================================================= */
+[data-theme="dark"] .back-to-top-btn {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .back-to-top-btn:hover {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* =========================================================
+   12. CERTIFICATIONS PAGE
+   ========================================================= */
+[data-theme="dark"] .certifications-section {
+  background: #050C1A;
+}
+
+[data-theme="dark"] .registrations-section,
+[data-theme="dark"] .quality-section {
+  background: #050C1A;
+}
+
+[data-theme="dark"] .awards-section,
+[data-theme="dark"] .gallery-section {
+  background: #07101F;
+}
+
+[data-theme="dark"] .cert-section-heading {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .cert-section-desc {
+  color: #A8C2E8;
+}
+
+/* =========================================================
+   13. PLACEMENTS PAGE
+   ========================================================= */
+[data-theme="dark"] .career-hero-title {
+  color: #EEF4FF;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .career-hero-subtitle {
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .career-hero-meta {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+/* =========================================================
+   14. COURSE DETAIL PAGE
+   ========================================================= */
+[data-theme="dark"] .course-detail-page {
+  background: #050C1A;
+}
+
+[data-theme="dark"] .course-hero-bg-overlay {
+  background: linear-gradient(180deg, rgba(5, 12, 26, 0.9) 0%, rgba(5, 12, 26, 0.98) 85%, #050C1A 100%);
+}
+
+[data-theme="dark"] .course-detail-hero::before {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.08) 1.5px, transparent 1.5px);
+}
+
+/* =========================================================
+   15. SECTION DIVIDERS & BORDERS
+   ========================================================= */
+[data-theme="dark"] .section-divider-gradient {
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.35) 50%, transparent 100%);
+}
+
+[data-theme="dark"] hr {
+  border-color: #152A4E;
+}
+
+/* =========================================================
+   16. BUTTONS — SECONDARY / OUTLINE IN DARK MODE
+   ========================================================= */
+[data-theme="dark"] .btn-secondary {
+  background: #0D1B35;
+  color: #EEF4FF !important;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: #112040;
+  border-color: #3B82F6;
+}
+
+[data-theme="dark"] .btn-outline {
+  color: #A8C2E8;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  border-color: #3B82F6;
+  color: #3B82F6;
+}
+
+/* =========================================================
+   17. MODALS
+   ========================================================= */
+[data-theme="dark"] .sparrow-modal-dialog {
+  background: #07101F;
+  border-color: #152A4E;
+}
+
+[data-theme="dark"] .sparrow-modal-title {
+  color: #EEF4FF;
+}
+
+[data-theme="dark"] .sparrow-modal-header {
+  border-bottom-color: #152A4E;
+}
+
+[data-theme="dark"] .sparrow-modal-close {
+  color: #607FA8;
+}
+
+[data-theme="dark"] .sparrow-modal-close:hover {
+  background: #0D1B35;
+  color: #EEF4FF;
+}
+
+/* =========================================================
+   18. GALLERY PAGE
+   ========================================================= */
+[data-theme="dark"] .gallery-toolbar-section {
+  background: #050C1A;
+}
+
+[data-theme="dark"] .gallery-frame-box {
+  background: #0D1B35;
+  border-bottom-color: #152A4E;
+  color: #607FA8;
+}
+
+[data-theme="dark"] .gallery-card-info {
+  background: #0D1B35;
+}
+
+/* =========================================================
+   19. ABOUT PAGE - ADDITIONAL FIXES
+   ========================================================= */
+[data-theme="dark"] .about-shape-one {
+  background: #2563EB;
+}
+
+[data-theme="dark"] .about-shape-two {
+  background: #3B82F6;
+}
+
+[data-theme="dark"] .about-emp-skill-pill {
+  background: rgba(59, 130, 246, 0.14);
+  color: #60A5FA;
+  border-color: rgba(59, 130, 246, 0.28);
+}
+
+[data-theme="dark"] .about-visual-icon-box,
+[data-theme="dark"] .about-mvv-icon,
+[data-theme="dark"] .about-feature-icon,
+[data-theme="dark"] .about-why-check,
+[data-theme="dark"] .about-stat-icon {
+  background: rgba(59, 130, 246, 0.14);
+  color: #60A5FA;
+}
+
+/* =========================================================
+   20. LEARNING METHODOLOGY PAGE
+   ========================================================= */
+[data-theme="dark"] .methodology-ready-box {
+  background: #0D1B35;
+  border-color: #152A4E;
+}
+
+/* =========================================================
+   21. WHATSAPP BUTTON & FLOATING CONTROLS
+   ========================================================= */
+[data-theme="dark"] .floating-whatsapp-container button,
+[data-theme="dark"] [class*="whatsapp-float"] {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================================
+   22. NOTIFICATION / EMPTY / SUCCESS / ERROR STATES
+   ========================================================= */
+[data-theme="dark"] .courses-empty {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .consultation-success-banner {
+  background: rgba(22, 163, 74, 0.15);
+  border-color: rgba(22, 163, 74, 0.35);
+  color: #86efac;
+}
+
+[data-theme="dark"] .form-error-banner {
+  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+/* =========================================================
+   23. ICONS / ICON BOXES (Generic)
+   ========================================================= */
+[data-theme="dark"] .training-feature-icon,
+[data-theme="dark"] .placement-icon-box,
+[data-theme="dark"] .home-preview-icon-box {
+  background: rgba(59, 130, 246, 0.14);
+  color: #60A5FA;
+}
+
+[data-theme="dark"] .hero-floating-icon {
+  background: rgba(139, 92, 246, 0.15);
+  color: #A78BFA;
+}
+
+/* =========================================================
+   24. WHATSAPP DIRECT CARD (CONTACT PAGE)
+   ========================================================= */
+[data-theme="dark"] .whatsapp-direct-card {
+  background: rgba(37, 211, 102, 0.06);
+  border-color: rgba(37, 211, 102, 0.2);
+}
+
+[data-theme="dark"] .whatsapp-direct-card:hover {
+  background: rgba(37, 211, 102, 0.12);
+}
+
+/* =========================================================
+   25. CTA SECTION — ensure transparent background
+   ========================================================= */
+[data-theme="dark"] .unified-cta-section {
+  background: transparent;
+}
+
+/* =========================================================
+   26. SCROLLBAR OVERRIDES FOR DARK MODE
+   ========================================================= */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #050C1A;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #152A4E;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* =========================================================
+   27. PROJECTS PAGE
+   ========================================================= */
+[data-theme="dark"] .live-projects-section {
+  background: #07101F;
+}
+
+[data-theme="dark"] .completed-projects-section {
+  background: #050C1A;
+}
+
+[data-theme="dark"] .client-coming-soon {
+  background: #0D1B35;
+  border-color: #152A4E;
+  color: #607FA8;
+}
+
+/* =========================================================
+   28. SELECTION COLOR IN DARK MODE
+   ========================================================= */
+[data-theme="dark"] ::selection {
+  background: rgba(59, 130, 246, 0.35);
+  color: #60A5FA;
+}
+
+/* =========================================================
+   29. FAQ SECTION
+   ========================================================= */
+[data-theme="dark"] .faq-answer {
+  color: #A8C2E8;
+}
+
+[data-theme="dark"] .faq-question-btn {
+  background: transparent;
+  color: #EEF4FF;
+}
+
+/* =========================================================
+   30. TESTIMONIAL SECTION
+   ========================================================= */
+[data-theme="dark"] .testimonial-preview blockquote {
+  color: #EEF4FF;
+}
+
+/* =========================================================
+   31. HOME PAGE ABOUT / IMG WRAPPERS
+   ========================================================= */
+[data-theme="dark"] .hero-img-wrapper {
+  border-color: rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="dark"] .about-img-wrapper {
+  border-color: rgba(59, 130, 246, 0.15);
+}
+
+/* =========================================================
+   32. CONTACT HERO - ENSURE DARK OVERLAY FOR DARK MODE
+   ========================================================= */
+[data-theme="dark"] .contact-hero-header .page-header-photo-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 12, 26, 0.95) 0%,
+    rgba(5, 12, 26, 0.80) 45%,
+    rgba(5, 12, 26, 0.30) 100%
+  );
+}
+
+/* =========================================================
+   33. LIGHT MODE PROTECTION — ensure nothing leaks
+       All [data-theme="dark"] rules are scoped and won't
+       affect the default (light) theme.
+   ========================================================= */
