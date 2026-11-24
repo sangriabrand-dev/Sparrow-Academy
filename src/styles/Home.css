@@ -89,10 +89,10 @@
    ========================================================= */
 .hero {
   position: relative;
-  min-height: 680px;
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
-  padding: 90px 0 100px;
+  padding: 56px 0 60px;
   overflow: hidden;
   background: linear-gradient(160deg, #E8EDFF 0%, #EEF2FF 40%, #F0F3FF 100%);
   border-bottom: 1px solid var(--border-light);
@@ -195,7 +195,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   align-items: center;
-  gap: 52px;
+  gap: 48px;
 }
 
 .hero-content {
@@ -339,7 +339,7 @@
   position: relative;
   width: 100%;
   max-width: 480px;
-  aspect-ratio: 4/3.8;
+  aspect-ratio: 4/3.2;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
@@ -421,14 +421,14 @@
 }
 
 .hero-floating-card-one {
-  top: 28px;
-  left: -28px;
+  top: 20px;
+  left: -20px;
   animation: floatSubtleOne 5s ease-in-out infinite alternate;
 }
 
 .hero-floating-card-two {
-  bottom: 28px;
-  right: -28px;
+  bottom: 20px;
+  right: -20px;
   animation: floatSubtleTwo 5.5s ease-in-out infinite alternate;
 }
 
@@ -1153,7 +1153,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 64px 0 72px;
+    padding: 48px 0 56px;
   }
 
   .hero-title {
@@ -1209,7 +1209,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding: 50px 0 60px;
+    padding: 40px 0 48px;
   }
 
   .hero-title {
