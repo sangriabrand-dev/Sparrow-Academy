@@ -14,7 +14,6 @@ const Instructors = lazy(() => import("./pages/Instructors.jsx"));
 const Contact = lazy(() => import("./pages/Contact.jsx"));
 const Projects = lazy(() => import("./pages/Projects.jsx"));
 const Placements = lazy(() => import("./pages/Placements.jsx"));
-const LearningMethodology = lazy(() => import("./pages/LearningMethodology.jsx"));
 const Certifications = lazy(() => import("./pages/Certifications.jsx"));
 const PhotoGallery = lazy(() => import("./pages/PhotoGallery.jsx"));
 const Login = lazy(() => import("./pages/Login.jsx"));
@@ -51,7 +50,6 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/placements" element={<Placements />} />
-            <Route path="/learning-methodology" element={<LearningMethodology />} />
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/gallery" element={<PhotoGallery />} />
             <Route path="/photo-gallery" element={<PhotoGallery />} />

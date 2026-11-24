@@ -1,51 +1,51 @@
 /* =========================================================
    SPARROW CREATIVE ACADEMY — UNIFIED DESIGN SYSTEM
-   Electric Indigo · Royal Violet · Bright Blue · Clean White · Obsidian Navy
-   Strictly Zero Nature/Green Palette
+   Midnight Navy · Electric Blue · Royal Violet · Cyan
+   Premium Dark-Capable Palette — Zero Nature/Green
    ========================================================= */
 
 /* Fonts loaded once via index.html with preconnect */
 
 :root {
   /* ── 1. CORE BRAND COLOR SYSTEM (Light Mode) ── */
-  --primary: #5B4BE1;                 /* Primary purple */
-  --primary-hover: #4838CE;
-  --primary-light: #7365EE;
-  --accent: #5B4BE1;                  /* Brand purple */
-  --accent-light: #8B7CF6;
-  --secondary: #2563EB;               /* Secondary blue */
-  --blue-bright: #2563EB;             /* Electric blue */
-  --blue-cyan: #0284c7;               /* Cyan / teal highlight */
-  
-  --gradient-primary: linear-gradient(135deg, #5B4BE1 0%, #2563EB 100%);
-  --gradient-hover: linear-gradient(135deg, #4838CE 0%, #1D4ED8 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(91, 75, 225, 0.10) 0%, rgba(37, 99, 235, 0.10) 100%);
-  --gradient-text: linear-gradient(135deg, #5B4BE1 0%, #2563EB 100%);
-  --gradient-banner: linear-gradient(135deg, #5B4BE1 0%, #2563EB 100%);
+  --primary: #1D4ED8;                 /* Electric Blue — deep for light bg */
+  --primary-hover: #1A43C4;
+  --primary-light: #3B82F6;
+  --accent: #7C3AED;                  /* Royal Violet */
+  --accent-light: #8B5CF6;
+  --secondary: #7C3AED;               /* Royal Violet secondary */
+  --blue-bright: #2563EB;             /* Electric blue vivid */
+  --blue-cyan: #0891B2;               /* Cyan — deeper for light bg */
 
-  /* ── 2. BACKGROUNDS & SURFACES (Light Mode — Original Purple/Lavender) ── */
-  --bg: #EEF2FF;                      /* Main background — soft lavender */
-  --bg-secondary: #F5F7FF;            /* Section background — lighter lavender */
-  --bg-wash: #E0E7FF;                 /* Wash — deeper lavender accent */
+  --gradient-primary: linear-gradient(135deg, #1D4ED8 0%, #7C3AED 100%);
+  --gradient-hover: linear-gradient(135deg, #1A43C4 0%, #6D28D9 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(29, 78, 216, 0.09) 0%, rgba(124, 58, 237, 0.09) 100%);
+  --gradient-text: linear-gradient(135deg, #1D4ED8 0%, #7C3AED 100%);
+  --gradient-banner: linear-gradient(135deg, #1D4ED8 0%, #7C3AED 60%, #0891B2 100%);
+
+  /* ── 2. BACKGROUNDS & SURFACES (Light Mode — Blue-tinted) ── */
+  --bg: #EFF4FF;                      /* Main background — soft blue-white */
+  --bg-secondary: #F5F8FF;            /* Section background */
+  --bg-wash: #DCE8FF;                 /* Wash — accent blue */
   --surface: #FFFFFF;                 /* Card background — clean white */
-  --surface-2: #F0F3FF;               /* Secondary surface */
-  --surface-soft: #E8EDFF;            /* Soft lavender for hover/tag areas */
-  --surface-subtle: #F5F7FF;          /* Subtle surface */
-  --hero-bg: radial-gradient(ellipse 100% 70% at 50% 0%, rgba(91, 75, 225, 0.14) 0%, rgba(238, 242, 255, 0.85) 55%, #EEF2FF 100%);
+  --surface-2: #F0F5FF;               /* Secondary surface */
+  --surface-soft: #E4EDFF;            /* Soft blue for hover/tag areas */
+  --surface-subtle: #F7F9FF;          /* Subtle surface */
+  --hero-bg: radial-gradient(ellipse 100% 70% at 50% 0%, rgba(29, 78, 216, 0.12) 0%, rgba(239, 244, 255, 0.85) 55%, #EFF4FF 100%);
   --glass: rgba(255, 255, 255, 0.90);
 
   /* ── 3. TYPOGRAPHY & TEXT (Light Mode) ── */
-  --text: #0F172A;                    /* Main text (Navy) */
-  --text-secondary: #3B4B6B;          /* Secondary text (Slate-navy) */
-  --text-muted: #4B5880;              /* Muted text */
-  --text-light: #64748B;              /* Subdued metadata */
+  --text: #040D21;                    /* Deep midnight navy */
+  --text-secondary: #1A2F5A;          /* Dark navy secondary */
+  --text-muted: #3A5280;              /* Muted navy-blue */
+  --text-light: #5A73A0;              /* Subdued blue-grey */
   --text-inverse: #FFFFFF;
 
   /* ── 4. BORDERS & DIVIDERS (Light Mode) ── */
-  --border: #C7D0F0;                  /* Borders — lavender-tinted */
-  --border-light: rgba(199, 208, 240, 0.7);
-  --border-accent: rgba(91, 75, 225, 0.30);
-  --border-md: #A5B4D8;
+  --border: #B8CCE8;                  /* Blue-tinted border */
+  --border-light: rgba(184, 204, 232, 0.7);
+  --border-accent: rgba(29, 78, 216, 0.28);
+  --border-md: #90AACC;
 
   /* ── 5. STATUS TOKENS ── */
   --success: #16A34A;
@@ -54,13 +54,13 @@
   --info: #2563EB;
 
   /* ── 6. ELEVATION & SHADOWS ── */
-  --shadow-xs: 0 1px 3px rgba(15, 23, 42, 0.04);
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
-  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.08);
-  --shadow-hover: 0 16px 36px rgba(91, 75, 225, 0.12);
-  --glow-primary: rgba(91, 75, 225, 0.20);
-  --glow-secondary: rgba(37, 99, 235, 0.18);
+  --shadow-xs: 0 1px 3px rgba(4, 13, 33, 0.05);
+  --shadow-sm: 0 2px 8px rgba(4, 13, 33, 0.07);
+  --shadow-md: 0 8px 24px rgba(4, 13, 33, 0.09);
+  --shadow-lg: 0 16px 40px rgba(4, 13, 33, 0.11);
+  --shadow-hover: 0 16px 36px rgba(29, 78, 216, 0.14);
+  --glow-primary: rgba(29, 78, 216, 0.22);
+  --glow-secondary: rgba(124, 58, 237, 0.18);
 
   /* ── 7. RADII SCALE ── */
   --radius-xs: 4px;
@@ -72,7 +72,7 @@
 
   /* ── 8. LAYOUT & SPACING SCALE (8px grid) ── */
   --container: 1220px;
-  --header-height: 74px;
+  --header-height: 84px;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -91,37 +91,37 @@
   --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
   /* ── 10. BACKWARD COMPATIBILITY ALIASES ── */
-  --sparrow-forest-deep: #0F172A;
-  --sparrow-forest: #5B4BE1;
-  --sparrow-forest-mid: #7365EE;
-  --sparrow-forest-light: #8B7CF6;
-  --sparrow-sage-dark: #5B4BE1;
-  --sparrow-sage: #8B7CF6;
-  --sparrow-sage-bright: #A79BFA;
+  --sparrow-forest-deep: #040D21;
+  --sparrow-forest: #1D4ED8;
+  --sparrow-forest-mid: #3B82F6;
+  --sparrow-forest-light: #60A5FA;
+  --sparrow-sage-dark: #7C3AED;
+  --sparrow-sage: #8B5CF6;
+  --sparrow-sage-bright: #A78BFA;
   --sparrow-sage-soft: #C4B5FD;
-  --sparrow-sage-pale: #E0E7FF;
-  --sparrow-sage-wash: #EEF2FF;
-  --sparrow-olive-dark: #1E1B4B;
-  --sparrow-olive: #3730A3;
-  --sparrow-olive-light: #4838CE;
+  --sparrow-sage-pale: #EDE9FE;
+  --sparrow-sage-wash: #EFF4FF;
+  --sparrow-olive-dark: #0A1628;
+  --sparrow-olive: #1E3A8A;
+  --sparrow-olive-light: #2563EB;
   --sparrow-amber: #F59E0B;
   --sparrow-terracotta: #EC4899;
   --sparrow-white: #FFFFFF;
   --sparrow-ivory: #FFFFFF;
-  --sparrow-cream: #F5F7FF;
-  --sparrow-cream-border: #DCE3F0;
-  --sparrow-background: #EEF2FF;
+  --sparrow-cream: #F5F8FF;
+  --sparrow-cream-border: #C4D5EE;
+  --sparrow-background: #EFF4FF;
   --sparrow-surface: #FFFFFF;
-  --sparrow-surface-soft: #E8EDFF;
-  --sparrow-surface-subtle: #F5F7FF;
-  --sparrow-text: #0F172A;
-  --sparrow-text-secondary: #475569;
-  --sparrow-text-muted: #64748B;
-  --sparrow-text-light: #94A3B8;
+  --sparrow-surface-soft: #E4EDFF;
+  --sparrow-surface-subtle: #F7F9FF;
+  --sparrow-text: #040D21;
+  --sparrow-text-secondary: #3A5280;
+  --sparrow-text-muted: #5A73A0;
+  --sparrow-text-light: #7A93C0;
   --sparrow-text-inverse: #FFFFFF;
-  --sparrow-border: #DCE3F0;
-  --sparrow-border-light: rgba(220, 227, 240, 0.7);
-  --sparrow-border-accent: rgba(91, 75, 225, 0.25);
+  --sparrow-border: #C4D5EE;
+  --sparrow-border-light: rgba(196, 213, 238, 0.7);
+  --sparrow-border-accent: rgba(29, 78, 216, 0.25);
   --sparrow-shadow-xs: var(--shadow-xs);
   --sparrow-shadow-sm: var(--shadow-sm);
   --sparrow-shadow-md: var(--shadow-md);
@@ -138,84 +138,85 @@
   --sparrow-transition-fast: var(--transition-fast);
   --sparrow-transition: var(--transition);
   --sparrow-transition-slow: var(--transition-slow);
-  --sparrow-indigo: #5B4BE1;
-  --sparrow-violet: #8B7CF6;
-  --sparrow-navy: #0F172A;
-  --sparrow-teal: #2563EB;
-  --primary-glow: rgba(91, 75, 225, 0.25);
+  --sparrow-indigo: #1D4ED8;
+  --sparrow-violet: #8B5CF6;
+  --sparrow-navy: #040D21;
+  --sparrow-teal: #0891B2;
+  --primary-glow: rgba(29, 78, 216, 0.25);
   --muted: var(--text-muted);
   --muted-l: var(--text-light);
 }
 
 /* =========================================================
-   DARK THEME — DEEP NAVY & SLATE
+   DARK THEME — MIDNIGHT NAVY + ELECTRIC BLUE + ROYAL VIOLET + CYAN
    ========================================================= */
 [data-theme="dark"] {
   /* ── 1. CORE BRAND COLOR SYSTEM (Dark Mode) ── */
-  --primary: #8B7CF6;                 /* Primary purple */
-  --primary-hover: #7C6AE6;
-  --primary-light: #A79BFA;
-  --accent: #8B7CF6;
-  --accent-light: #A79BFA;
-  --secondary: #60A5FA;               /* Secondary blue */
-  --blue-bright: #60A5FA;
+  --primary: #3B82F6;                 /* Electric Blue — vivid on dark */
+  --primary-hover: #2563EB;
+  --primary-light: #60A5FA;
+  --accent: #8B5CF6;                  /* Royal Violet — vivid on dark */
+  --accent-light: #A78BFA;
+  --secondary: #8B5CF6;               /* Royal Violet */
+  --blue-bright: #3B82F6;
+  --blue-cyan: #22D3EE;               /* Cyan — vivid on dark */
 
-  --gradient-primary: linear-gradient(135deg, #8B7CF6 0%, #60A5FA 100%);
-  --gradient-hover: linear-gradient(135deg, #7C6AE6 0%, #3B82F6 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(139, 124, 246, 0.15) 0%, rgba(96, 165, 250, 0.15) 100%);
-  --gradient-text: linear-gradient(135deg, #8B7CF6 0%, #60A5FA 100%);
-  --gradient-banner: linear-gradient(135deg, #8B7CF6 0%, #60A5FA 100%);
+  --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+  --gradient-hover: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+  --gradient-text: linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%);
+  --gradient-banner: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 60%, #22D3EE 100%);
 
-  /* ── 2. BACKGROUNDS & SURFACES (Dark Mode) ── */
-  --bg: #0B1120;                      /* Main background */
-  --bg-secondary: #111827;            /* Section background */
-  --bg-wash: #172033;
-  --surface: #1E293B;                 /* Card background */
-  --surface-2: #111827;
-  --surface-soft: #253348;
-  --surface-subtle: #0E1626;
-  --hero-bg: radial-gradient(ellipse 90% 60% at 50% -5%, rgba(139, 124, 246, 0.15) 0%, rgba(17, 24, 39, 0.8) 50%, #0B1120 100%);
-  --glass: rgba(30, 41, 59, 0.90);
+  /* ── 2. BACKGROUNDS & SURFACES (Dark Mode — Midnight Navy) ── */
+  --bg: #050C1A;                      /* Deepest midnight navy */
+  --bg-secondary: #07101F;            /* Secondary / alt section bg */
+  --bg-wash: #0A1628;
+  --surface: #0D1B35;                 /* Card / surface background */
+  --surface-2: #07101F;
+  --surface-soft: #112040;            /* Hover / soft surface */
+  --surface-subtle: #060E1C;          /* Darkest surface */
+  --hero-bg: radial-gradient(ellipse 90% 60% at 50% -5%, rgba(59, 130, 246, 0.18) 0%, rgba(5, 12, 26, 0.85) 55%, #050C1A 100%);
+  --glass: rgba(13, 27, 53, 0.90);
 
   /* ── 3. TYPOGRAPHY & TEXT (Dark Mode) ── */
-  --text: #F8FAFC;                    /* Main text (White) */
-  --text-secondary: #CBD5E1;          /* Secondary text (Slate) */
-  --text-muted: #94A3B8;
-  --text-light: #64748B;
-  --text-inverse: #0B1120;
+  --text: #EEF4FF;                    /* Near-white with blue tint */
+  --text-secondary: #A8C2E8;          /* Soft blue-grey */
+  --text-muted: #607FA8;              /* Medium blue */
+  --text-light: #4A6485;              /* Dim blue */
+  --text-inverse: #050C1A;
 
   /* ── 4. BORDERS & DIVIDERS (Dark Mode) ── */
-  --border: #334155;                  /* Borders */
-  --border-light: rgba(51, 65, 85, 0.6);
-  --border-accent: rgba(139, 124, 246, 0.35);
-  --border-md: #475569;
+  --border: #152A4E;                  /* Midnight navy border */
+  --border-light: rgba(21, 42, 78, 0.7);
+  --border-accent: rgba(59, 130, 246, 0.35);
+  --border-md: #1E3A6E;
 
   /* ── 6. ELEVATION & SHADOWS (Dark Mode) ── */
-  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.2);
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 20px rgba(139, 124, 246, 0.15);
-  --glow-primary: rgba(139, 124, 246, 0.25);
-  --glow-secondary: rgba(96, 165, 250, 0.20);
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 24px rgba(59, 130, 246, 0.18);
+  --glow-primary: rgba(59, 130, 246, 0.28);
+  --glow-secondary: rgba(139, 92, 246, 0.22);
 
   /* ── 10. BACKWARD COMPATIBILITY ALIASES (Dark Mode) ── */
-  --sparrow-background: #0B1120;
-  --sparrow-surface: #1E293B;
-  --sparrow-surface-soft: #253348;
-  --sparrow-surface-subtle: #0E1626;
-  --sparrow-text: #F8FAFC;
-  --sparrow-text-secondary: #CBD5E1;
-  --sparrow-text-muted: #94A3B8;
-  --sparrow-text-light: #64748B;
-  --sparrow-border: #334155;
-  --sparrow-border-light: rgba(51, 65, 85, 0.6);
-  --sparrow-border-accent: rgba(139, 124, 246, 0.35);
-  --sparrow-forest: #8B7CF6;
-  --sparrow-forest-mid: #A79BFA;
-  --sparrow-sage: #8B7CF6;
+  --sparrow-background: #050C1A;
+  --sparrow-surface: #0D1B35;
+  --sparrow-surface-soft: #112040;
+  --sparrow-surface-subtle: #060E1C;
+  --sparrow-text: #EEF4FF;
+  --sparrow-text-secondary: #A8C2E8;
+  --sparrow-text-muted: #607FA8;
+  --sparrow-text-light: #4A6485;
+  --sparrow-border: #152A4E;
+  --sparrow-border-light: rgba(21, 42, 78, 0.6);
+  --sparrow-border-accent: rgba(59, 130, 246, 0.35);
+  --sparrow-forest: #3B82F6;
+  --sparrow-forest-mid: #60A5FA;
+  --sparrow-sage: #8B5CF6;
   --sparrow-sage-soft: #C4B5FD;
-  --sparrow-sage-bright: #A79BFA;
+  --sparrow-sage-bright: #A78BFA;
 }
 
 /* =========================================================
@@ -248,7 +249,7 @@ body {
 
 @media (max-width: 500px) {
   :root {
-    --header-height: 64px;
+    --header-height: 68px;
   }
 }
 

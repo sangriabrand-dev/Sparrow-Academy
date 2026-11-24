@@ -13,21 +13,22 @@ export const COURSES_DATA = [
     badge: "Core Program",
     category: "Design",
     title: "AI-Powered Graphic Design & Creative Design",
-    desc: "Master prompt engineering, generative design tools, and brand systems to produce commercial visual assets, typography, and advertising concepts.",
+    desc: "Learn the fundamentals of graphic design, image editing, digital illustration, branding, print design, social media creatives and AI-assisted design.",
     level: "Beginner → Advanced",
     duration: "24 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "🎨",
     image: "/course-images/01_graphic-design.png",
     tools: ["Midjourney", "Adobe Firefly", "Photoshop", "Illustrator"],
-    overview: "Deep dive into Midjourney v6, Adobe Firefly, Stable Diffusion, and vector workflows for professional visual communication, corporate branding, and concept art.",
+    overview: "Turn creative ideas into impactful visual designs. Learn the fundamentals of graphic design, image editing, digital illustration, branding, print design, social media creatives and AI-assisted design.",
     whoIsItFor: "Graphic designers, visual artists, art directors, marketers, and creative brand specialists.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Prompt engineering & style transfer in Midjourney & Adobe Firefly",
-      "Commercial vector workflows & typography pairing hierarchies",
-      "Brand identity systems, color accessibility & design tokens",
-      "High-resolution print and web asset mastering with AI upscaling"
+      "Design principles, colour theory and typography.",
+      "Image editing, retouching and photo manipulation.",
+      "Vector illustration, logo and brand identity design.",
+      "Posters, brochures and publication layouts.",
+      "Social media, website and digital advertising creatives."
     ],
     syllabus: [
       {
@@ -71,21 +72,22 @@ export const COURSES_DATA = [
     badge: "Popular",
     category: "Video",
     title: "Video Editing & AI-Powered Post-Production",
-    desc: "Transform video editing workflows using AI cut detection, automated color matching, neural audio clean-up, and timeline acceleration.",
+    desc: "Learn to transform raw footage into engaging videos through editing, sound design, visual enhancement and AI-assisted post-production techniques.",
     level: "Intermediate",
     duration: "22 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "🎬",
     image: "/course-images/02_video-editing.png",
     tools: ["Premiere Pro", "DaVinci Resolve", "Topaz Video AI", "Audition"],
-    overview: "Learn industry-standard post-production workflows integrating Premiere Pro, DaVinci Resolve, and generative AI tools for high-impact commercial video editing.",
+    overview: "Learn to transform raw footage into engaging videos through editing, sound design, visual enhancement and AI-assisted post-production techniques.",
     whoIsItFor: "Video editors, YouTube creators, documentary filmmakers, and commercial agency editors.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Smart timeline pacing, ripple edits & multi-cam synchronization",
-      "AI transcription, text-based editing & automated dynamic captions",
-      "Neural audio restoration, voice leveling & sound design",
-      "DaVinci Resolve color grading, look matching & LUT workflows"
+      "Video editing fundamentals, timelines and transitions.",
+      "Advanced editing, multi-camera and green-screen techniques.",
+      "Audio editing, voice-overs and sound design.",
+      "Colour correction and grading.",
+      "AI-assisted video enhancement, subtitles and content creation."
     ],
     syllabus: [
       {
@@ -129,21 +131,22 @@ export const COURSES_DATA = [
     badge: "Core Program",
     category: "Animation",
     title: "AI Motion Graphics & Animation",
-    desc: "Create dynamic motion graphics, title sequences, and kinetic typography using After Effects enhanced by AI motion extensions.",
+    desc: "Bring ideas to life through animated text, logos, illustrations and visual storytelling with 2D animation, motion graphics and AI-assisted animation.",
     level: "Beginner → Advanced",
     duration: "24 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "✨",
     image: "/course-images/course4_motion-graphics.png",
     tools: ["After Effects", "Cinema 4D", "Animate", "Lottie"],
-    overview: "Combine traditional 2D animation principles with AI generative depth, rotoscoping, speed-ramp synthesis, and broadcast motion toolkits.",
+    overview: "Bring ideas to life through animated text, logos, illustrations and visual storytelling. Develop skills in 2D animation, motion graphics, 3D motion concepts and AI-assisted animation.",
     whoIsItFor: "Motion designers, 2D animators, broadcast designers, and commercial video creators.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "After Effects AI plugins, rotobrush & depth map extraction",
-      "Kinetic typography, logo reveals & brand motion idents",
-      "Generative loop textures, visual effects & transitions",
-      "Exporting broadcast and social-optimized delivery packages"
+      "Animation principles, timing and movement.",
+      "Text, logo and title animation.",
+      "2D animation and character movement.",
+      "Motion tracking and animated visual effects.",
+      "3D motion graphics and AI-assisted animation."
     ],
     syllabus: [
       {
@@ -187,21 +190,22 @@ export const COURSES_DATA = [
     badge: "Comprehensive",
     category: "3D Animation",
     title: "AI 3D Modeling, Animation & Visualization",
-    desc: "Generate 3D models, textures, automated rigs, and architectural/product visualizations using Blender, Unreal Engine, and AI 3D pipelines.",
+    desc: "Learn to create three-dimensional objects, characters and environments. Explore modelling, materials, lighting, animation and realistic visual presentation.",
     level: "Intermediate → Advanced",
     duration: "30 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "👾",
     image: "/course-images/course5_3d-modeling.png",
     tools: ["Blender", "Unreal Engine 5", "Substance 3D", "ZBrush"],
-    overview: "Accelerate 3D creation with AI mesh synthesis, markerless mocap retargeting, procedural shading, and photorealistic real-time lighting.",
+    overview: "Learn to create three-dimensional objects, characters and environments. Explore modelling, materials, lighting, animation and realistic visual presentation through practical projects.",
     whoIsItFor: "3D modelers, game artists, architects, industrial designers, and visualizers.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "2D concept to 3D mesh synthesis & AI retopology workflows",
-      "Automated character rigging and markerless motion capture",
-      "PBR texturing, procedural materials & AI upscaling",
-      "Real-time lighting & rendering in Blender Cycles & Unreal Engine 5"
+      "3D modelling fundamentals and object creation.",
+      "Character, product and prop modelling.",
+      "UV mapping, texturing and material creation.",
+      "3D lighting, cameras and rendering.",
+      "Character setup, animation and 3D visualization."
     ],
     syllabus: [
       {
@@ -245,21 +249,22 @@ export const COURSES_DATA = [
     badge: "Industry Track",
     category: "VFX",
     title: "Visual Effects (VFX), Compositing & AI Workflows",
-    desc: "Master high-end visual effects compositing, clean plate generation, matchmoving, green screen extraction, and generative CGI integration.",
+    desc: "Discover how visual effects bring cinematic scenes to life. Learn compositing, object isolation, motion tracking and AI-assisted visual enhancement techniques.",
     level: "Intermediate → Advanced",
     duration: "28 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "🔮",
     image: "/course-images/course6_vfx-compositing.png",
     tools: ["Nuke", "After Effects", "Mocha Pro", "Silhouette"],
-    overview: "Learn node-based and layer-based compositing combining industry tools with cutting-edge AI inpainting, planar tracking, and atmospheric effects.",
+    overview: "Discover how visual effects bring cinematic scenes to life. Learn to combine visual elements, isolate objects, track movement and create enhanced scenes using compositing and AI-assisted techniques.",
     whoIsItFor: "VFX artists, compositors, film production technicians, and CGI creators.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Multi-layer compositing, color space & ACES color pipelines",
-      "AI clean plate generation & automated wire/marker removal",
-      "Camera tracking, 3D point cloud solving & element integration",
-      "Atmospheric FX, CG lighting matching & photorealistic finishing"
+      "VFX production fundamentals and shot planning.",
+      "Rotoscoping, masking and object isolation.",
+      "Motion tracking and screen replacement.",
+      "Green-screen techniques and digital compositing.",
+      "Visual effects, simulations and AI-assisted enhancement."
     ],
     syllabus: [
       {
@@ -303,21 +308,22 @@ export const COURSES_DATA = [
     badge: "Advanced Track",
     category: "AI & Tech",
     title: "Artificial Intelligence & Machine Learning",
-    desc: "Build, fine-tune, and deploy machine learning models, neural networks, LLMs, and computer vision systems using Python and modern frameworks.",
+    desc: "Explore how intelligent systems learn from data. Build foundational programming, data preparation, machine learning and introductory deep learning skills through practical projects.",
     level: "Beginner → Advanced",
     duration: "36 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "🤖",
     image: "/course-images/course7_ai-machine-learning.png",
     tools: ["Python", "PyTorch", "HuggingFace", "scikit-learn"],
-    overview: "Hands-on foundation and advanced training in Python, PyTorch, scikit-learn, LLM fine-tuning, RAG architectures, and model deployment.",
+    overview: "Explore how intelligent systems learn from data and solve real-world problems. Build foundational programming, data preparation, machine learning and introductory deep learning skills through practical projects.",
     whoIsItFor: "Software developers, engineers, data practitioners, and tech innovators.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Python for ML: NumPy, Pandas, scikit-learn fundamentals",
-      "Deep learning architectures: CNNs, RNNs, and Transformers",
-      "Large language models (LLMs), prompt engineering & RAG pipelines",
-      "Model deployment with FastAPI, Docker & cloud endpoints"
+      "Artificial intelligence, machine learning and deep learning fundamentals.",
+      "Programming and data handling.",
+      "Data preparation, cleaning and analysis.",
+      "Machine learning algorithms and model evaluation.",
+      "Neural networks, computer vision and generative AI fundamentals."
     ],
     syllabus: [
       {
@@ -361,21 +367,22 @@ export const COURSES_DATA = [
     badge: "Engineering Track",
     category: "Cloud & DevOps",
     title: "Cloud Computing & DevOps Engineering",
-    desc: "Design resilient cloud infrastructure and automated CI/CD deployment pipelines using AWS, Docker, Kubernetes, and Terraform.",
+    desc: "Understand how applications and services are hosted, managed and deployed using cloud infrastructure, server management and development-to-deployment workflows.",
     level: "Intermediate",
     duration: "32 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "☁️",
     image: "/course-images/Cloud DevOps Workspace Dashboard.png",
     tools: ["AWS", "Docker", "Kubernetes", "Terraform"],
-    overview: "Master enterprise cloud architecture, container orchestration, infrastructure-as-code, and security best practices.",
+    overview: "Understand how applications and services are hosted, managed and deployed using cloud infrastructure. Learn the fundamentals of cloud computing, server management and development-to-deployment workflows.",
     whoIsItFor: "System administrators, DevOps engineers, backend developers, and cloud architects.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "AWS core services: EC2, S3, RDS, VPC & IAM governance",
-      "Docker containerization & multi-stage image optimization",
-      "Kubernetes cluster configuration, pods, services, and ingress",
-      "Infrastructure as Code with Terraform & automated CI/CD pipelines"
+      "Cloud computing concepts and service models.",
+      "Cloud infrastructure and resource management.",
+      "Cloud storage, virtual machines and servers.",
+      "Linux fundamentals and networking basics.",
+      "Version control, containerisation and deployment workflows."
     ],
     syllabus: [
       {
@@ -419,21 +426,22 @@ export const COURSES_DATA = [
     badge: "High Demand",
     category: "Data",
     title: "Data Analytics",
-    desc: "Turn complex data into strategic business insights using SQL, Excel, Python, Power BI, and interactive Tableau dashboards.",
+    desc: "Learn how to organise, analyse and interpret data to uncover useful insights. Develop practical skills in data preparation, visualisation and business reporting.",
     level: "Beginner → Intermediate",
     duration: "24 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "📊",
     image: "/course-images/a_detailed_realistic_tech_workspace_scene_for_d.png",
     tools: ["SQL", "Python", "Power BI", "Tableau"],
-    overview: "Master end-to-end data pipelines: querying relational databases, exploratory data analysis, statistical modeling, and visual KPI storytelling.",
+    overview: "Learn how to organise, analyse and interpret data to uncover useful insights. Develop practical skills in data preparation, database fundamentals, visualisation and business reporting.",
     whoIsItFor: "Aspiring data analysts, business intelligence specialists, product managers, and decision-makers.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Advanced SQL queries, window functions, CTEs & database joins",
-      "Data cleaning & statistical analysis with Python (Pandas/Seaborn)",
-      "Interactive dashboard design in Power BI & Tableau",
-      "Business metrics, conversion funnels & executive presentations"
+      "Data analytics fundamentals and datasets.",
+      "Spreadsheet operations, formulas and data organisation.",
+      "Database concepts and query fundamentals.",
+      "Data cleaning, analysis and statistical basics.",
+      "Charts, dashboards, KPIs and business reporting."
     ],
     syllabus: [
       {
@@ -477,21 +485,22 @@ export const COURSES_DATA = [
     badge: "Professional Track",
     category: "Engineering",
     title: "Quality Control Engineering",
-    desc: "Master quality assurance methodologies, statistical process control, ISO standards, and automated test protocols for engineering excellence.",
+    desc: "Understand how quality is maintained in industrial and production environments. Develop practical skills in product inspection, measurement, documentation and reporting.",
     level: "Beginner → Advanced",
     duration: "28 hrs (Self-Paced + Live Labs)",
     mode: "Online Live Cohort & Offline Studio Mentorship (Bengaluru)",
     icon: "⚙️",
     image: "/course-images/Quality Control Engineering Workspace.png",
     tools: ["Six Sigma", "SPC Tools", "Minitab", "ISO 9001"],
-    overview: "Comprehensive training in QA/QC systems, root cause analysis, Six Sigma methodologies, measurement inspection, and compliance auditing.",
+    overview: "Understand how quality is maintained in industrial and production environments. Develop practical skills in product inspection, measurement, quality documentation and reporting.",
     whoIsItFor: "Quality engineers, manufacturing specialists, inspectors, and operations managers.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Quality Management Systems (QMS) & ISO 9001 compliance standards",
-      "Statistical Process Control (SPC), control charts & process capability (Cp, Cpk)",
-      "Root cause analysis: 5 Whys, Ishikawa diagrams, FMEA & 8D problem-solving",
-      "Metrology, geometric dimensioning (GD&T) & non-destructive inspection"
+      "Quality control and quality assurance fundamentals.",
+      "Product inspection and defect identification.",
+      "Basic measuring instruments and measurement practices.",
+      "Quality records, checklists and inspection reports.",
+      "Documentation, record management and practical inspection exercises."
     ],
     syllabus: [
       {
@@ -542,14 +551,15 @@ export const COURSES_DATA = [
     icon: "📈",
     image: "/course-images/digital-marketing-seo.png",
     tools: ["Digital Marketing", "SEO", "Social Media", "Content Marketing"],
-    overview: "Comprehensive practical training in search engine optimization, performance advertising, content promotion, and social media campaign management.",
+    overview: "Learn how businesses build their online presence, connect with audiences and promote products or services through digital channels. Explore content creation, search visibility, advertising and campaign reporting.",
     whoIsItFor: "Marketers, entrepreneurs, content creators, business owners, and aspiring growth specialists.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Search engine optimization (SEO) techniques, search intent & on-page strategies",
-      "Social media marketing, content planning & organic engagement strategies",
-      "Online campaign management, audience targeting & paid ad fundamentals",
-      "Web analytics, conversion tracking & performance reporting"
+      "Digital marketing fundamentals.",
+      "Social media page management and audience engagement.",
+      "Content creation, captions and promotional designs.",
+      "Search engine optimisation and keyword fundamentals.",
+      "Digital advertising, campaign planning and performance reporting."
     ],
     syllabus: [
       {
@@ -600,14 +610,15 @@ export const COURSES_DATA = [
     icon: "📷",
     image: "/course-images/photography-videography-drone.png",
     tools: ["Photography", "Videography", "Camera", "Drone Training"],
-    overview: "Hands-on studio and field training covering camera operation, studio lighting, cinematic videography, visual storytelling, and introductory aerial drone filming techniques.",
+    overview: "Develop practical visual storytelling skills through photography, video recording, lighting, audio and introductory drone operations. Learn to capture and present creative visuals through hands-on exercises.",
     whoIsItFor: "Photographers, videographers, visual content creators, filmmakers, and creative media enthusiasts.",
     certificateInfo: "Verified Sparrow Creative Academy Certificate of Completion awarded upon portfolio submission.",
     whatYouLearn: [
-      "Camera operations, manual exposure controls, lens selection & framing",
-      "Studio and natural lighting setups, composition & visual storytelling",
-      "Cinematic video production, camera movement & audio capture essentials",
-      "Introductory drone flight fundamentals, safety protocols & aerial filming techniques"
+      "Photography fundamentals, composition and framing.",
+      "Camera handling, focus and exposure.",
+      "Portrait, product and outdoor photography.",
+      "Videography, lighting and audio recording.",
+      "Photo and video editing, introductory drone operation and safety."
     ],
     syllabus: [
       {
@@ -646,19 +657,5 @@ export const COURSES_DATA = [
   }
 ];
 
-export const COURSE_CATEGORIES = [
-  "All",
-  "Design",
-  "Video",
-  "Animation",
-  "3D Animation",
-  "VFX",
-  "AI & Tech",
-  "Cloud & DevOps",
-  "Data",
-  "Engineering",
-  "Digital Marketing",
-  "Photography & Videography"
-];
 
 export default COURSES_DATA;

@@ -24,22 +24,22 @@
 }
 
 [data-theme="dark"] .sparrow-navbar {
-  background: rgba(11, 17, 32, 0.95);
-  border-bottom-color: var(--border);
+  background: rgba(5, 12, 26, 0.97);
+  border-bottom-color: #152A4E;
 }
 
 [data-theme="dark"] .sparrow-navbar.scrolled {
-  background: #0b1120;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
-  border-bottom-color: var(--border);
+  background: #050C1A;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+  border-bottom-color: #152A4E;
 }
 
 .sparrow-nav-container {
   width: 100%;
   max-width: 1420px;
   margin: 0 auto;
-  padding: 0 20px 0 12px;
-  height: 74px;
+  padding: 0 20px 0 16px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,14 +57,17 @@
 }
 
 .sparrow-navbar-logo {
-  height: 48px;
-  width: auto;
-  max-width: 175px;
-  max-height: 50px;
+  height: auto;
+  width: 195px;
+  max-height: 70px;
+  min-height: 48px;
   object-fit: contain;
+  object-position: left center;
   display: block;
   background: transparent !important;
-  transition: all var(--transition);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transition: transform var(--transition), opacity var(--transition);
 }
 
 .sparrow-logo-dark {
@@ -444,7 +447,7 @@
   .sparrow-nav-container {
     padding: 0 14px 0 10px;
     gap: 10px;
-    height: 70px;
+    height: 80px;
   }
   .sparrow-brand-link {
     margin-right: 12px;
@@ -467,8 +470,8 @@
     height: 38px;
   }
   .sparrow-navbar-logo {
-    max-width: 155px;
-    height: 44px;
+    width: 172px;
+    max-height: 62px;
   }
 }
 
@@ -477,15 +480,15 @@
    ========================================================= */
 @media (max-width: 1100px) {
   .sparrow-nav-container {
-    height: 68px;
+    height: 74px;
     padding: 0 16px 0 12px;
   }
 
   .sparrow-navbar-logo {
-    width: auto;
-    max-width: 150px;
-    max-height: 42px;
-    height: 40px;
+    width: 180px;
+    height: auto;
+    max-height: 62px;
+    min-height: 44px;
   }
 
   .sparrow-nav-actions .sparrow-contact-btn.desktop {
@@ -569,15 +572,15 @@
   .sparrow-nav-container {
     padding: 0 12px 0 8px;
     gap: 6px;
-    height: 64px;
+    height: 68px;
   }
 
   .sparrow-navbar-logo,
   .sparrow-navbar.scrolled .sparrow-navbar-logo {
-    height: 35px;
-    max-height: 36px;
-    width: auto;
-    max-width: 130px;
+    width: 148px;
+    height: auto;
+    max-height: 50px;
+    min-height: 36px;
   }
 
   .sparrow-nav-actions {
