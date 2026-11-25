@@ -1,6 +1,6 @@
 const SITE = "https://sparrowacademy.online";
 const DEFAULT_DESCRIPTION =
-  "Learn AI-powered design, video creation, VFX and animation at Sparrow Creative Academy, Bengaluru. Hands-on training in Midjourney, Runway, After Effects and Blender. Book a free consultation.";
+  "Learn AI-powered design, video creation, VFX and animation at Sparrow Creative Academy, Bengaluru. Hands-on, project-based training in graphic design, animation, visual effects and AI-assisted creative workflows. Book a free consultation.";
 
 function setTag(selector, attr, value, create) {
   let el = document.querySelector(selector);

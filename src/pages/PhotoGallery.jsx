@@ -44,7 +44,7 @@ const GALLERY_PLACEHOLDERS = [
   {
     category: "Training Labs",
     title: "Post-Production & Grading Suite",
-    desc: "Acoustically treated editing and color grading bays running Premiere Pro and DaVinci Resolve."
+    desc: "Acoustically treated editing and colour grading bays equipped for professional video post-production."
   },
   {
     category: "Workshops & Events",

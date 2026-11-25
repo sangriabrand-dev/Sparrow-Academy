@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/layout/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
 import PageHeader from "../components/common/PageHeader.jsx";
@@ -16,23 +16,40 @@ const IconArrow = () => (
   </svg>
 );
 
-const IconStar = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+const IconChevron = ({ open }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.2"
+    width="16"
+    height="16"
+    aria-hidden="true"
+    className={`accordion-chevron${open ? " accordion-chevron-open" : ""}`}
+  >
+    <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
 export default function Courses() {
   const [searchFilter, setSearchFilter] = useState("");
+  /* Track which course card has its learning areas expanded on mobile.
+     null = all collapsed. Only one open at a time. */
+  const [expandedId, setExpandedId] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-        setPageSeo({
+    setPageSeo({
       title: "AI Design & Video Creation Courses in Bengaluru | Sparrow Creative Academy",
       description: "Explore AI design, AI video creation, VFX, motion graphics, 3D animation and UI/UX courses at Sparrow Creative Academy, Bengaluru. Hands-on, project-based training."
     });
   }, []);
+
+  /* Collapse expanded card when search changes */
+  useEffect(() => {
+    setExpandedId(null);
+  }, [searchFilter]);
 
   const filteredCourses = COURSES_DATA.filter((course) => {
     const matchesSearch =
@@ -45,86 +62,92 @@ export default function Courses() {
     navigate(`/contact?course=${encodeURIComponent(courseTitle)}`);
   };
 
-  const renderCourseCard = (c) => (
-    <article className="course-card" key={c.id}>
-      {/* Clean Complete 16:9 Thumbnail Header */}
-      <div className="course-card-thumb-wrapper">
-        {c.image ? (
-          <img
-            src={c.image}
-            alt={`${c.title} course illustration`}
-            className="course-card-thumb"
-            loading="lazy"
-            width="640"
-            height="360"
-          />
-        ) : (
-          <div className="course-card-banner fallback">
-            <span className="course-banner-icon" aria-hidden="true">{c.icon}</span>
+  const toggleExpanded = (id) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
+
+  const renderCourseCard = (c) => {
+    const isOpen = expandedId === c.id;
+    return (
+      <article className="course-card course-card-detailed" key={c.id}>
+        {/* 16:9 Course Thumbnail */}
+        <div className="course-card-thumb-wrapper">
+          {c.image ? (
+            <img
+              src={c.image}
+              alt={`${c.title} course illustration`}
+              className="course-card-thumb"
+              loading="lazy"
+              width="640"
+              height="360"
+            />
+          ) : (
+            <div className="course-card-banner fallback">
+              <span className="course-banner-icon" aria-hidden="true">{c.icon}</span>
+            </div>
+          )}
+        </div>
+
+        <div className="course-body">
+          {/* Course Name */}
+          <h3 className="course-title">{c.title}</h3>
+
+          {/* Short Course Overview — always visible */}
+          {c.overview && (
+            <p className="course-overview-text">{c.overview}</p>
+          )}
+
+          {/* Key Learning Areas
+              • Desktop: always rendered, visible via CSS
+              • Mobile:  hidden behind accordion toggle */}
+          {c.whatYouLearn && c.whatYouLearn.length > 0 && (
+            <>
+              {/* ── Mobile accordion toggle ── */}
+              <button
+                type="button"
+                className="accordion-toggle"
+                aria-expanded={isOpen}
+                aria-controls={`learning-${c.id}`}
+                onClick={() => toggleExpanded(c.id)}
+              >
+                <span className="course-learning-label accordion-toggle-label">
+                  View Learning Areas
+                </span>
+                <IconChevron open={isOpen} />
+              </button>
+
+              {/* ── Learning areas panel ── */}
+              <div
+                id={`learning-${c.id}`}
+                className={`course-learning-areas${isOpen ? " course-learning-open" : ""}`}
+              >
+                <p className="course-learning-label desktop-learning-label">Key Learning Areas</p>
+                <ul className="course-learning-list" aria-label="Key learning areas">
+                  {c.whatYouLearn.map((item, idx) => (
+                    <li key={idx} className="course-learning-item">
+                      <span className="course-learning-dot" aria-hidden="true" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
+
+          {/* Enquire Now Button — always visible */}
+          <div className="course-card-actions">
+            <button
+              type="button"
+              className="btn-reusable btn-primary btn-md enquire-button"
+              onClick={() => handleEnrollClick(c.title)}
+            >
+              Enquire Now <IconArrow />
+            </button>
           </div>
-        )}
-      </div>
-
-      <div className="course-body">
-        <div className="course-badges-row">
-          <span className="course-badge">{c.badge}</span>
-          <span className="course-category-tag">{c.category}</span>
         </div>
-
-        <h3 className="course-title">{c.title}</h3>
-        <p className="course-desc">{c.desc}</p>
-
-        {/* Up to 3 Key Tool Badges */}
-        {c.tools && c.tools.length > 0 && (
-          <div className="course-tools-list" aria-label="Tools covered">
-            {c.tools.slice(0, 3).map((tool) => (
-              <span key={tool} className="course-tool-pill">{tool}</span>
-            ))}
-          </div>
-        )}
-
-        <div className="course-meta">
-          <span title="Skill Level">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M12 20v-6M6 20v-3M18 20v-9" strokeLinecap="round" />
-            </svg>
-            {c.level}
-          </span>
-          <span title="Total Duration">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 6v6l4 2" strokeLinecap="round" />
-            </svg>
-            {c.duration}
-          </span>
-          <span title="Career Support" className="placement-meta-item">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            100% Placement Support
-          </span>
-        </div>
-
-        <div className="course-card-actions">
-          <Link
-            to={`/courses/${c.slug}`}
-            className="btn-reusable btn-secondary btn-md"
-            style={{ flex: 1, textDecoration: "none" }}
-          >
-            Curriculum
-          </Link>
-          <button
-            type="button"
-            className="btn-reusable btn-primary btn-md enroll-button"
-            style={{ flex: 1.2 }}
-            onClick={() => handleEnrollClick(c.title)}
-          >
-            Enroll <IconArrow />
-          </button>
-        </div>
-      </div>
-    </article>
-  );
+      </article>
+    );
+  };
 
   return (
     <div className="courses-wrapper">
@@ -142,13 +165,6 @@ export default function Courses() {
 
       {/* ── FILTER & SEARCH TOOLBAR ── */}
       <section className="courses-toolbar-section">
-        <div className="container">
-          <div className="courses-placement-callout">
-            <span className="placement-callout-badge">Career Track</span>
-            <span>All diploma &amp; studio programs include <strong>100% Placement Support</strong>, portfolio reviews &amp; 1-on-1 mentor guidance.</span>
-          </div>
-        </div>
-
         <div className="container toolbar-inner">
           <div className="courses-search-bar">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

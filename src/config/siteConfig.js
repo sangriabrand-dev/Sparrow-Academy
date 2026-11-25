@@ -7,7 +7,7 @@
 export const siteConfig = {
   companyName: "Sparrow Creative Academy",
   tagline: "Master the Future of AI-Driven Creativity",
-  description: "Learn design, animation, and AI-powered creative tools through practical, project-based learning. Explore Midjourney, Runway ML, Stable Diffusion, Adobe Firefly, and more.",
+  description: "Learn design, animation, and AI-powered creative skills through practical, project-based learning. Develop industry-relevant skills in graphic design, animation, visual effects, video production and AI-assisted creative workflows.",
 
   // Client-specific contact details
   phone: "+91 81233 66153",

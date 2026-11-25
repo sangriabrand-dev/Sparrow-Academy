@@ -48,7 +48,7 @@ export default function Home() {
     window.scrollTo(0, 0);
     setPageSeo({
       title: "AI Design, VFX & Animation Courses in Bengaluru | Sparrow Creative Academy",
-      description: "Learn AI-powered design, video creation, VFX and animation at Sparrow Creative Academy, Bengaluru. Hands-on training in Midjourney, Runway, After Effects and Blender. Book a free consultation."
+      description: "Learn AI-powered design, video creation, VFX and animation at Sparrow Creative Academy, Bengaluru. Hands-on, project-based training in graphic design, animation, visual effects and AI-assisted creative workflows. Book a free consultation."
     });
   }, []);
 
@@ -176,14 +176,15 @@ export default function Home() {
                 </div>
                 <div className="home-simple-course-body">
                   <h3 className="home-simple-course-title">{c.title}</h3>
-                  <p className="home-simple-course-desc">{c.desc}</p>
-                  <button
-                    type="button"
-                    className="btn-reusable btn-primary btn-sm home-simple-enroll-btn"
-                    onClick={() => navigate(`/contact?course=${encodeURIComponent(c.title)}`)}
-                  >
-                    Enroll Now <IconArrow />
-                  </button>
+                  <div className="home-simple-course-actions">
+                    <button
+                      type="button"
+                      className="btn-reusable btn-primary btn-sm home-simple-enroll-btn"
+                      onClick={() => navigate(`/contact?course=${encodeURIComponent(c.title)}`)}
+                    >
+                      Enquire Now <IconArrow />
+                    </button>
+                  </div>
                 </div>
               </article>
             ))}

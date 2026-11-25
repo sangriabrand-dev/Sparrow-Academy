@@ -90,8 +90,8 @@ const EMPLOYEES = [
     name: "Priya Nair",
     role: "Head of Technology & AI Programs",
     exp: "8+ years",
-    bio: "AI/ML engineer and educator with deep expertise in generative AI, Python, and creative technology. Bridges the gap between technical skills and creative applications for industry-ready graduates.",
-    skills: ["AI & ML", "Python", "Generative AI", "Cloud DevOps"],
+    bio: "AI/ML engineer and educator with deep expertise in generative AI, programming and creative technology. Bridges the gap between technical skills and creative applications for industry-ready graduates.",
+    skills: ["AI & ML", "Programming", "Generative AI", "Cloud DevOps"],
     initials: "PN",
     avatarBg: "linear-gradient(135deg, #7c3aed, #ec4899)"
   }

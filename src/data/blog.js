@@ -40,7 +40,7 @@ export const BLOG_POSTS = [
     tag: "Animation",
     title: "3D Character Rigging with AI — Cut Your Workflow by 60%",
     excerpt: "Automated rigging tools powered by machine learning can detect bone structures and assign weights in seconds. We tested five of them so you don't have to.",
-    content: "Skinning and weight painting have long been the most tedious bottlenecks in 3D production. With modern machine-learning models trained on tens of thousands of human and creature meshes, automatic rigging has reached production fidelity. Sara Lin shares benchmarks and Maya/Blender tips.",
+    content: "Skinning and weight painting have long been the most tedious bottlenecks in 3D production. With modern machine-learning models trained on tens of thousands of human and creature meshes, automatic rigging has reached production fidelity. Sara Lin shares benchmarks and practical 3D animation tips.",
     author: "Sara Lin",
     date: "Jun 14, 2026",
     read: "8 min read",

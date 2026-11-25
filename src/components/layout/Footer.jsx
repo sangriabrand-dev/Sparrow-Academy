@@ -18,18 +18,23 @@ export default function Footer() {
             className="footer-brand-logo-wrap"
             aria-label="Sparrow Creative Academy Home"
           >
-            <img
-              src={logoImg}
-              alt="Sparrow Creative Academy"
-              className="footer-brand-logo-img"
-              width="160"
-              height="44"
-              loading="lazy"
-            />
+            {/* Logo uses a light backing so it stays legible on the dark footer */}
+            <span className="footer-logo-backing" aria-hidden="true">
+              <img
+                src={logoImg}
+                alt="Sparrow Creative Academy"
+                className="footer-brand-logo-img"
+                width="180"
+                height="54"
+                loading="lazy"
+              />
+            </span>
           </Link>
 
           <p className="footer-mission-text">
-            {siteConfig.description}
+            Learn design, animation, and AI-powered creative skills through practical,
+            project-based learning. Develop industry-relevant skills in graphic design,
+            animation, visual effects, video production and AI-assisted creative workflows.
           </p>
 
           {(

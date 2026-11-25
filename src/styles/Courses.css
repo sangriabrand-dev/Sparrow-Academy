@@ -240,10 +240,84 @@
   margin-bottom: 16px;
 }
 
+/* ── TOOLBAR SECTION ── */
+.courses-toolbar-section {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.toolbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.courses-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  max-width: 480px;
+  padding: 10px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  transition: border-color var(--transition);
+}
+
+.courses-search-bar:focus-within {
+  border-color: var(--primary);
+}
+
+.courses-search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--text);
+  outline: none;
+}
+
+.courses-search-bar input::placeholder {
+  color: var(--text-muted);
+}
+
+.clear-filter-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition), background var(--transition);
+}
+
+.clear-filter-btn:hover {
+  color: var(--text);
+  background: var(--surface-soft);
+}
+
 /* ── RESPONSIVENESS ── */
+
+/* ── Tablet: two columns ── */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
 @media (max-width: 768px) {
   .courses-grid {
     grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
   }
   .courses-section {
     padding: var(--space-12) 0 var(--space-16);
@@ -257,5 +331,146 @@
 
   .course-learning-item {
     font-size: 0.82rem;
+  }
+}
+
+/* =========================================================
+   MOBILE ACCORDION — LEARNING AREAS TOGGLE
+   Below 769px: learning areas hidden behind a toggle.
+   Above 768px: accordion toggle hidden; learning areas always visible.
+   ========================================================= */
+
+/* ── Accordion toggle button ── */
+.accordion-toggle {
+  display: none; /* Hidden on desktop */
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition), border-color var(--transition);
+  /* Generous tap target */
+  min-height: 44px;
+}
+
+.accordion-toggle:hover,
+.accordion-toggle:focus-visible {
+  background: rgba(79, 70, 229, 0.06);
+  border-color: var(--border-accent);
+  outline: none;
+}
+
+.accordion-toggle:focus-visible {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+[data-theme="dark"] .accordion-toggle {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: #1e3a8a;
+}
+
+[data-theme="dark"] .accordion-toggle:hover,
+[data-theme="dark"] .accordion-toggle:focus-visible {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: #3B82F6;
+}
+
+.accordion-toggle-label {
+  /* Override the uppercase tracking for toggle label — keep it readable */
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ── Chevron icon rotation ── */
+.accordion-chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary);
+}
+
+.accordion-chevron-open {
+  transform: rotate(180deg);
+}
+
+/* ── Desktop: always show static label; hide toggle ── */
+.desktop-learning-label {
+  display: block; /* visible on desktop */
+}
+
+/* ── Learning areas panel — desktop: always visible ── */
+.course-learning-areas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* No overflow hidden on desktop — always fully visible */
+}
+
+/* =========================================================
+   Mobile-only accordion behaviour (≤ 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* Show the toggle button */
+  .accordion-toggle {
+    display: flex;
+  }
+
+  /* Hide the static "Key Learning Areas" desktop label */
+  .desktop-learning-label {
+    display: none;
+  }
+
+  /* Learning areas panel: collapsed by default */
+  .course-learning-areas {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    /* Smooth expand animation */
+    transition:
+      max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.28s ease;
+    /* Remove gap when collapsed so it takes no space */
+    gap: 0;
+    margin-top: 0;
+  }
+
+  /* Expanded state — driven by JS class toggled in React */
+  .course-learning-areas.course-learning-open {
+    /* Large enough max-height to never clip content of any course.
+       Five bullet points ≈ 200px; using 400px gives plenty of room. */
+    max-height: 400px;
+    opacity: 1;
+    gap: 8px;
+    margin-top: 2px;
+    transition:
+      max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s ease;
+  }
+
+  /* Prevent card hover lift on mobile (cards don't hover on touch) */
+  .course-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Keep image properly fitted */
+  .course-card-thumb-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+  .course-card-thumb {
+    object-fit: contain;
+  }
+
+  /* Enquire Now always full-width */
+  .enquire-button {
+    width: 100%;
   }
 }

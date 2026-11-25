@@ -11,68 +11,68 @@ import "../styles/CourseDetail.css";
 const COURSE_SEO = {
   "ai-powered-graphic-design-and-creative-design": {
     title: "AI Graphic Design & Creative Design Course Bengaluru | Sparrow",
-    desc: "Master AI-powered graphic design, Midjourney, Adobe Firefly, vector branding and creative typography at Sparrow Creative Academy, Bengaluru."
+    desc: "Learn AI-powered graphic design, digital illustration, vector branding and creative typography at Sparrow Creative Academy, Bengaluru. Build a professional portfolio."
   },
   "video-editing-and-ai-powered-post-production": {
     title: "Video Editing & AI Post-Production Course in Bengaluru | Sparrow",
-    desc: "Learn video editing and AI-powered post-production in Bengaluru with Premiere Pro, DaVinci Resolve, and smart automated timelines."
+    desc: "Learn professional video editing and AI-powered post-production in Bengaluru. Master colour grading, sound design and smart automated editing workflows at Sparrow Academy."
   },
   "ai-motion-graphics-and-animation": {
     title: "AI Motion Graphics & Animation Course in Bengaluru | Sparrow",
-    desc: "Create dynamic motion graphics, kinetic typography and visual effects using After Effects and AI animation plugins in Bengaluru."
+    desc: "Create dynamic motion graphics, kinetic typography and visual effects using industry-standard animation tools and AI-assisted workflows in Bengaluru."
   },
   "ai-3d-modeling-animation-and-visualization": {
     title: "AI 3D Modeling, Animation & Visualization Course | Sparrow",
-    desc: "Learn 3D modeling, markerless mocap, Blender Cycles, and Unreal Engine 5 with AI-assisted generation workflows in Bengaluru."
+    desc: "Learn 3D modelling, character animation and AI-assisted visualization workflows at Sparrow Creative Academy, Bengaluru. Practical, project-based training."
   },
   "visual-effects-vfx-compositing-and-ai-workflows": {
     title: "VFX, Compositing & AI Workflows Course in Bengaluru | Sparrow",
-    desc: "Master visual effects compositing, clean plate generation, matchmoving, and CGI integration with AI pipelines at Sparrow Academy."
+    desc: "Master visual effects compositing, clean plate generation, motion tracking and CGI integration with AI-assisted pipelines at Sparrow Academy, Bengaluru."
   },
   "artificial-intelligence-and-machine-learning": {
     title: "Artificial Intelligence & Machine Learning Course | Sparrow",
-    desc: "Learn AI & Machine Learning in Bengaluru: Python, PyTorch, neural networks, LLM fine-tuning, RAG, and production model deployment."
+    desc: "Learn AI and machine learning in Bengaluru — programming, data preparation, neural networks, deep learning fundamentals and production model deployment at Sparrow Academy."
   },
   "cloud-computing-and-devops-engineering": {
     title: "Cloud Computing & DevOps Engineering Course | Sparrow",
-    desc: "Master AWS cloud architecture, Docker containerization, Kubernetes orchestration, and automated CI/CD pipelines in Bengaluru."
+    desc: "Master cloud infrastructure, containerisation, orchestration and automated CI/CD deployment pipelines at Sparrow Creative Academy, Bengaluru."
   },
   "data-analytics": {
     title: "Data Analytics Course in Bengaluru | Sparrow Creative Academy",
-    desc: "Master SQL, Python data analysis, Power BI, and Tableau dashboards for commercial business intelligence and data analytics careers."
+    desc: "Learn data analytics, spreadsheet operations, database querying, data visualisation and business intelligence dashboard development at Sparrow Academy, Bengaluru."
   },
   "quality-control-engineering": {
     title: "Quality Control Engineering Course in Bengaluru | Sparrow",
-    desc: "Learn QA/QC systems, ISO 9001 compliance, Statistical Process Control (SPC), and Six Sigma methodologies at Sparrow Creative Academy."
+    desc: "Learn quality assurance systems, inspection practices, statistical process control and quality documentation at Sparrow Creative Academy, Bengaluru."
   },
   "digital-marketing-and-seo": {
     title: "Digital Marketing & SEO Course in Bengaluru | Sparrow",
-    desc: "Master search engine optimization, Google Ads, performance marketing, content strategy, and GA4 analytics at Sparrow Creative Academy."
+    desc: "Master search engine optimisation, digital advertising, performance marketing, content strategy and campaign analytics at Sparrow Creative Academy, Bengaluru."
   },
   "photography-videography-and-drone-pilot-training": {
     title: "Photography, Videography & Drone Pilot Training in Bengaluru | Sparrow",
-    desc: "Hands-on studio camera operations, lighting, cinematic videography, and introductory aerial drone filming techniques in Bengaluru."
+    desc: "Hands-on studio camera operations, lighting, cinematic videography and introductory aerial drone filming techniques at Sparrow Creative Academy, Bengaluru."
   },
   // Legacy aliases for backward compatibility
   "ai-powered-motion-design": {
     title: "AI Motion Graphics & Animation Course in Bengaluru | Sparrow Creative Academy",
-    desc: "Learn AI motion graphics, animation and VFX workflows in Bengaluru. Hands-on projects with After Effects and AI video tools."
+    desc: "Learn AI motion graphics, animation and visual effects workflows in Bengaluru. Hands-on projects using industry-standard animation and compositing tools."
   },
   "generative-art-and-design": {
     title: "AI-Powered Graphic Design & Creative Design Course | Sparrow",
-    desc: "Master generative AI art and design in Bengaluru with Midjourney and modern AI tools. Build a professional portfolio."
+    desc: "Master AI-assisted graphic design and creative workflows in Bengaluru. Build a professional design portfolio at Sparrow Creative Academy."
   },
   "3d-character-animation": {
     title: "AI 3D Modeling, Animation & Visualization Course | Sparrow",
-    desc: "Learn 3D modeling and animation in Bengaluru, from rigging to final render, with AI-assisted workflows."
+    desc: "Learn 3D modelling and character animation in Bengaluru, from rigging to final render, with AI-assisted workflows at Sparrow Creative Academy."
   },
   "video-production-with-ai": {
     title: "Video Editing & AI-Powered Post-Production Course | Sparrow",
-    desc: "Master video editing and AI-powered post-production with Premiere Pro and DaVinci Resolve in Bengaluru."
+    desc: "Master professional video editing and AI-powered post-production in Bengaluru. Colour grading, sound design and smart automated editing workflows."
   },
   "brand-identity-design": {
     title: "AI Graphic Design & Creative Design Course Bengaluru | Sparrow",
-    desc: "Learn brand identity and graphic design with AI tools in Bengaluru. Build real brand projects for your portfolio."
+    desc: "Learn brand identity and graphic design with AI-assisted tools in Bengaluru. Build real brand projects for your portfolio at Sparrow Creative Academy."
   }
 };
 
